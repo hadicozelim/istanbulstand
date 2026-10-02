@@ -1,0 +1,1105 @@
+/*------------------------------------------------------------------
+
+Project:	Treviso - One page multi purpose page
+Version:	1.0
+Last change:	17/08/2015 [...]
+Designed by:	MOOZ Themes / www.MOOZthemes.com
+Primary use:	One page
+
+/*--------------------
+Import Google Fonts
+--------------------*/
+
+/* main font for menu. */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:200,300,400,500,700,900|Montserrat:600,700,800);
+
+/*--------------------
+1. General
+--------------------*/
+
+body {
+	margin: 0px;
+	font-family: "Raleway", Sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 200;
+	letter-spacing: 0.4px;
+	font-family: "Raleway", Sans-serif;
+	color: #0a0a0a;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 28px;
+	letter-spacing: 0.2px;
+	color: #0a0a0a;
+}
+
+a:hover, a:focus, a:active, a.active {
+    color: #812021;
+}
+a, a:hover, a:focus, a:active, a.active {
+    outline: 0;
+}
+
+::selection {
+    text-shadow: none;
+    background: #812021;
+}
+
+@media (min-width: 768px) {
+	section {
+	    padding: 150px 0;
+	}
+}
+
+section {
+	padding: 35px 0 60px;
+}
+
+/*--------------------
+1.1 Reset bootstrap
+--------------------*/
+
+.row-0-gutter {
+    margin-left: -13px;
+    margin-right: -13px;
+}
+
+.col-0-gutter {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*--------------------
+2. Navigation
+--------------------*/
+
+.navbar-default {
+	background-color: #E6E6E6;
+	border-color: transparent
+}
+.navbar-default .navbar-brand {
+	color: #fff;
+    padding: 5px;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
+	color: #812021
+}
+.navbar-default .navbar-collapse {
+	border-color: rgba(255,255,255,.02)
+}
+.navbar-default .navbar-toggle {
+	background-color: #812021;
+	border-color: #812021
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff
+}
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
+	background-color: #812021
+}
+.navbar-default .nav li a {
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #5B5E66;
+    border-bottom: 1px solid;
+    border-color: #5B5E66;
+    margin: 10px 15px;
+    padding: 0 0 2px 0;
+}
+
+.navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
+	border-color: #812021;
+	outline: 0
+}
+
+.navbar-default .navbar-nav>.active>a {
+	border-radius: 0;
+	color: #fff;
+	background-color: #812021
+}
+.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
+	color: #fff;
+	background-color: #812021
+}
+
+@media (min-width:768px) {
+	.navbar-default
+	{
+		background-color: transparent;
+		padding: 40px 0 0px;
+    	-webkit-transition:padding .3s;
+		-moz-transition:padding .3s;
+		transition:padding .3s;
+		border:0
+	}
+	.navbar-default .navbar-brand {
+		font-size: 2em;
+		-webkit-transition:all .3s;
+		-moz-transition:all .3s;
+		transition:all .3s
+        padding: 0px;
+	}
+	.navbar-default .navbar-nav>.active>a {
+		border-radius: 3px
+	}
+	.navbar-default.navbar-shrink {
+		background-color: #5B5E66;
+		padding: 10px 0
+	}
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 4px;
+    }
+}
+
+/*--------------------
+4. Sections
+--------------------*/
+
+.section-title {
+	padding-bottom: 30px;
+}
+
+.section-title h2 {
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+.section-title p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 33px;
+	margin: 25px 100px 30px 100px;
+}
+
+.mz-module .section-title {
+    padding: 40px 0;
+}
+
+/*--------------------
+4.1. About
+--------------------*/
+
+.mz-about-container {
+    padding: 0 50px;
+}
+
+.mz-module-about {
+	padding: 20px;
+}
+
+.mz-about-default {
+    background-color: #5B5E66;
+    background-image: linear-gradient(135deg, #5B5E66 0%, #686A71 100%);
+}
+
+.mz-about-dark {
+    background-color: #5B5E66;
+    background-image: linear-gradient(135deg, #686A71 0%, #5B5E66 100%);
+}
+
+.mz-module-about h3 {
+font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    }
+
+.mz-module-about p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 27px;
+	color: #DAD9D9;
+}
+
+.ot-circle {
+	text-align: center;
+	color: #E6E6E6;
+	margin: 40px 0;
+	font-size: 37px;
+}
+
+/*--------------------
+4.2. Skills
+--------------------*/
+
+.skills-text h2 {
+    margin: 0 0 30px;
+}
+
+.skillbar-item {
+    margin-bottom: 30px;    
+}
+
+.skillbar-item:last-child {
+    margin-bottom: 60px;    
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.skillbar-bar {
+    display: block;
+    background-color: #FFFFFF;
+    height: 10px;
+    width: 100%;
+    border: 1px solid #DAD9D9;
+    border-radius: 10px;
+}
+
+.skillbar h3 {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #5B5E66;
+    letter-spacing: 2px;    
+    margin: 0;
+    padding: 0 0 12px 0;
+}
+
+.skillbar-percent {
+    color: #fff;
+    background-color: #8B393A;
+    float: left;
+    height: 4px;
+    margin: 2px 0;
+    border-radius: 10px;
+    border: 1px solid #8B393A;
+}
+
+/*--------------------
+4.3. Portfolio
+--------------------*/
+
+figure {
+	position: relative;
+    overflow: hidden;
+    margin: 0 1px 1px 0;
+    background: #812021;
+    text-align: center;
+    cursor: pointer;	
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;	
+}
+
+.ot-portfolio-item figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.ot-portfolio-item figure figcaption, .ot-portfolio-item figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure.effect-bubba {
+	background: #0a0a0a;
+	margin-bottom: 1px;
+}
+
+figure.effect-bubba img {
+	opacity: 0.85;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+	opacity: 0.5;
+}
+
+/* Portföy: hafif koyu overlay, hover'da koyulaşır */
+figure.effect-bubba figcaption {
+	background: rgba(10, 10, 10, 0.30);
+	-webkit-transition: background 0.35s;
+	transition: background 0.35s;
+}
+figure.effect-bubba:hover figcaption {
+	background: rgba(10, 10, 10, 0.72);
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+	padding-top: 30%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+	padding: 20px 2.5em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*--------------------
+4.4. Dark Short section (counters, quote, etc)
+--------------------*/
+
+.light-bg {
+    background: #E6E6E6;
+}
+
+/*--------------------
+4.5. Intro Text
+--------------------*/
+
+.intro-section {
+	padding: 60px 0 0 0;
+	margin: 0;
+}
+
+.intro-section .section-title {
+/*	padding: 0px 85px; */
+	text-align: justify;	
+}
+
+.intro-section p {
+	font-size: 14px;
+	color: #8A8A8E;
+	font-weight: 500;
+	line-height: 32px;
+	padding: 47px;
+	font-family: "Raleway";
+	margin: 0;
+	background-color: #E6E6E6;
+}
+
+/*--------------------
+4.6. Team
+--------------------*/
+
+.team-item {
+    text-align: center;
+    background-color: #E6E6E6;
+}
+
+.team-item h3 {
+font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px;
+    text-transform: uppercase;
+}
+
+.team-item .team-position {
+color: #77787D;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.team-item p {
+	font-size: 13px;
+	font-weight: 500;
+	color: #8A8A8E;
+	padding: 18px 30px 35px 30px;
+	line-height: 24px;
+}
+
+/*--------------------
+4.7. Contacts
+--------------------*/
+
+section#contact form {
+    width: 60%;
+    margin: 15px auto;
+}
+
+section#contact.form-group {
+margin-bottom: 25px;
+}
+
+section#contact .form-group input, section#contact .form-group textarea {
+    padding: 15px;
+    border: 1px solid #C1BCBD;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    font-size: 13px;
+}
+
+.contact h3 {
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 13px;
+}
+
+.contact .day {
+    display: inline-block;
+    width: 80px;
+}
+
+.contact i {
+    margin-right: 5px;
+}
+
+/*--------------------
+5. Footer
+--------------------*/
+
+footer {
+    padding: 30px;
+    background-color: #5B5E66;    
+}
+
+footer p {
+    color: #B1ACAE;
+    margin: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+}
+
+footer p a {
+    color: #fff;
+}
+
+footer p a span {
+    color: #AC8081;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/*--------------------
+6. Modal
+--------------------*/
+
+.modal-content {
+	border-radius: 0;	
+}
+.modal-header .close {
+	font-size: 30px;	
+}
+.modal-title {    
+	text-transform: uppercase;
+	font-size: 23px;
+}
+
+.modal-body {
+	padding: 0;
+}
+
+.modal-body p {
+	margin: 30px 20px;
+	color: #5B5E66;		
+}
+
+.modal-works {
+font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    margin: 25px 20px;
+}
+
+.modal-works span {
+	background-color: #812021;
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+/*--------------------
+7. Components
+--------------------*/
+
+.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
+    color: #fff;
+    background-color: #812021;
+    border-color: #975354;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn {
+    color: #fff;
+    background-color: #812021;
+    border-color: #975354;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-xl {
+    color: #fff;
+     background-color: #812021;
+    border-color: #812021;
+    font-family: "Robot",sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+/* Back to top button
+---------------------------------- */
+#back-top {
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    right: 50px;
+}
+#back-top a {
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    font: 11px/100% Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #B1ACAE;
+    /* background color transition */
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    background: #812021;
+}
+/* arrow icon (span tag) */
+#back-top i {
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+}
+#back-top a {
+    width: 40px;
+    height: 40px;
+}
+#back-top i {
+    margin-top: 7px;
+    font-size: 20px;
+}
+}
+
+/*==================================================
+  İSTANBUL STAND - DÜZENLEMELER
+  (modern başlık, standart boşluklar, animasyon,
+   sticky menü, kontakt kutuları, footer)
+==================================================*/
+
+/* --- Sabit (sticky) menü --- */
+body { padding-top: 74px; }
+.navbar-default {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #ffffff;
+    padding: 12px 0;
+    border: 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .08);
+    -webkit-transition: padding .3s, box-shadow .3s;
+    transition: padding .3s, box-shadow .3s;
+}
+.navbar-default.navbar-shrink {
+    background-color: #ffffff;
+    padding: 6px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .16);
+}
+.navbar-brand img { height: 46px; width: auto; -webkit-transition: height .3s; transition: height .3s; }
+.navbar-default.navbar-shrink .navbar-brand img { height: 38px; }
+.navbar-default .nav li a { color: #0a0a0a; border-color: transparent; }
+.nav-link-active, .navbar-default .nav li a:hover { color: #8B393A; border-color: #8B393A; }
+.lang-switch { font-weight: 500 !important; }
+
+/* --- Bölüm boşlukları standart --- */
+section { padding: 90px 0; }
+@media (min-width: 768px) { section { padding: 90px 0; } }
+@media (max-width: 767px) { section { padding: 55px 0; } body { padding-top: 74px; } }
+
+/* --- Modern başlık: büyük, bold, siyah-koyu gri degrade --- */
+html { scroll-behavior: smooth; }
+.section-title { padding-bottom: 40px; }
+.section-title h2 {
+    font-family: "Montserrat", "Raleway", sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #812021;
+    background: linear-gradient(135deg, #812021 0%, #975354 52%, #812021 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 8px;
+}
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: 18px auto 0;
+    background: linear-gradient(90deg, #812021, #B79596);
+    border-radius: 2px;
+}
+@media (max-width: 767px) { .section-title h2 { font-size: 32px; } }
+
+.ig-icon { width: 32px; height: 32px; vertical-align: middle; margin-right: 6px; }
+
+/* --- Hizmet blokları: hover'da sadece metin büyür --- */
+.services-section { background: #E6E6E6; }
+.services-section .about-intro { padding-bottom: 40px; }
+.service-grid { margin-left: 0; margin-right: 0; }
+.service-grid > div { cursor: pointer; }
+.service-grid .mz-module-about { padding: 46px 18px; }
+.service-grid .mz-module-about h3 {
+    margin-bottom: 0;
+    display: inline-block;
+    -webkit-transition: -webkit-transform .35s ease, color .35s ease;
+    transition: transform .35s ease, color .35s ease;
+}
+.service-grid > div:hover .mz-module-about h3 {
+    -webkit-transform: scale(1.22);
+    transform: scale(1.22);
+    color: #ffffff;
+}
+
+.reveal { opacity: 0; -webkit-transform: translateY(28px); transform: translateY(28px); -webkit-transition: opacity .6s ease, -webkit-transform .6s ease; transition: opacity .6s ease, transform .6s ease; }
+.reveal.revealed { opacity: 1; -webkit-transform: none; transform: none; }
+
+/* --- Referans görselleri --- */
+.team-item { margin-bottom: 24px; overflow: hidden; }
+.team-item img { -webkit-transition: -webkit-transform .5s ease; transition: transform .5s ease; }
+.team-item:hover img { -webkit-transform: scale(1.05); transform: scale(1.05); }
+
+/* --- İletişim kutuları + harita --- */
+.contact-branches { margin-bottom: 20px; }
+.contact-box {
+    background: #E6E6E6;
+    border-top: 3px solid #5B5E66;
+    padding: 28px 28px 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .07);
+    -webkit-transition: box-shadow .3s; transition: box-shadow .3s;
+}
+.contact-box:hover { box-shadow: 0 16px 34px rgba(0, 0, 0, .14); }
+.contact-box h3 { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 16px; color: #5B5E66; }
+.contact-box h3 i { color: #8B393A; margin-right: 8px; }
+.contact-box p { font-size: 15px; margin: 8px 0; color: #686A71; }
+.contact-box p i { width: 20px; color: #77787D; }
+.contact-box a { color: #5B5E66; font-weight: 500; }
+.contact-box a:hover { color: #8B393A; }
+.map-embed { margin-top: 18px; height: 244px; padding: 10px; border: 1px solid #DAD9D9; }
+.map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* --- Kişi kartları --- */
+.team-section { background: #E6E6E6; }
+.team-heading { font-family: "Montserrat", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 20px; margin: 20px 0 26px; }
+.person-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background: #8B393A;
+    border: 1px solid #8B393A;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .05);
+    padding: 30px 18px;
+    text-align: center;
+    margin-bottom: 26px;
+    -webkit-transition: -webkit-transform .3s, box-shadow .3s; transition: transform .3s, box-shadow .3s;
+}
+.person-card:hover { -webkit-transform: translateY(-6px); transform: translateY(-6px); box-shadow: 0 6px 16px rgba(0, 0, 0, .12); }
+.person-card .avatar {
+    width: 72px; height: 72px; line-height: 72px; margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #E6E6E6;
+    color: #8B393A; font-size: 28px; font-weight: 700; letter-spacing: 0;
+}
+.person-card h4 { color: #fff; font-size: 18px; font-weight: 700; margin: 0 0 12px; text-transform: uppercase; letter-spacing: 1px; }
+.person-card .person-mail-icon { display: block; color: #E6E6E6; font-size: 22px; margin-bottom: 6px; }
+.person-card .person-mail { display: block; color: #E6E6E6; font-size: 13px; word-break: break-all; margin-bottom: 4px; }
+.person-card:hover .person-mail { color: #fff; }
+.person-card .person-tel { display: inline-block; color: #fff; font-size: 14px; font-weight: 600; border: 1px solid #B79596; border-radius: 30px; padding: 7px 16px; }
+.person-card .person-tel:hover { background: #E6E6E6; color: #8B393A; border-color: #E6E6E6; }
+
+.whatsapp-row { margin-top: 20px; }
+
+/* --- Footer --- */
+footer { background: linear-gradient(160deg, #1a1a1a 0%, #000000 60%, #111111 100%); padding: 50px 0 20px; }
+.footer-cols { padding-bottom: 24px; border-bottom: 1px solid #77787D; }
+.footer-logo { max-width: 195px; height: auto; margin-bottom: 16px; -webkit-filter: brightness(0) invert(1); filter: brightness(0) invert(1); }
+footer h4 { color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 16px; }
+footer p { color: #B1ACAE; font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: .2px; line-height: 1.7; margin: 6px 0; }
+footer p i { width: 18px; color: #8A8A8E; }
+footer p a { color: #fff; }
+footer p a:hover { color: #812021; }
+.footer-bottom { padding-top: 18px; text-align: center; }
+.footer-bottom p { font-size: 12px; }
+.social { margin-top: 4px; }
+.social-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px; margin-right: 10px;
+    border-radius: 50%; background: #ffffff; color: #0a0a0a !important; font-size: 18px;
+    text-decoration: none;
+    -webkit-transition: background .3s, color .3s, -webkit-transform .3s; transition: background .3s, color .3s, transform .3s;
+}
+.social-link:hover { background: #0a0a0a; color: #ffffff !important; -webkit-transform: translateY(-3px); transform: translateY(-3px); }
+.social-link[aria-label="WhatsApp"] i {
+    display: inline-block;
+    -webkit-animation: waPulse 1.6s ease-in-out infinite; animation: waPulse 1.6s ease-in-out infinite;
+}
+.social-link[aria-label="WhatsApp"]:hover i { -webkit-animation-play-state: paused; animation-play-state: paused; }
+@-webkit-keyframes waPulse { 0%, 100% { -webkit-transform: scale(1); } 50% { -webkit-transform: scale(1.16); } }
+@keyframes waPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.16); } }
+
+/* --- Yukarı çık butonu görünürlük --- */
+#back-top { opacity: 0; visibility: hidden; -webkit-transition: opacity .3s, visibility .3s; transition: opacity .3s, visibility .3s; }
+#back-top.visible { opacity: 1; visibility: visible; }
+#back-top a { display: flex; align-items: center; justify-content: center; background: #5B5E66; color: #fff; }
+#back-top a:hover { background: #B79596; color: #5B5E66; }
+#back-top i { margin-top: 0; font-size: 24px; }
+
+/* --- İletişim: kırık beyaz zemin, siyah gradyan başlık & kutular --- */
+#contact.contact-section { background: #F5F5F5; }
+.contact-section .section-title h2 {
+    background: linear-gradient(135deg, #000000 0%, #444444 52%, #000000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-section .section-title h2::after { background: linear-gradient(90deg, #000000, #77787D); }
+.contact-section .section-title p { color: #0a0a0a; }
+.contact-section .contact-box {
+    background: linear-gradient(160deg, #1a1a1a 0%, #000000 60%, #111111 100%);
+    border-top-color: #B79596;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+.contact-section .contact-box h3 { color: #ffffff; }
+.contact-section .contact-box h3 i { color: #B79596; }
+.contact-section .contact-box p { color: #DAD9D9; }
+.contact-section .contact-box p i { color: #B1ACAE; }
+.contact-section .contact-box a { color: #ffffff; }
+.contact-section .contact-box a:hover { color: #B79596; }
+.contact-section .map-embed { background: linear-gradient(160deg, #1a1a1a 0%, #000000 100%); border-color: #333333; }
+
+/* --- Hizmet kutuları: siyaha yakın gradyan --- */
+.services-section .mz-about-default {
+    background-color: #111111;
+    background-image: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+}
+.services-section .mz-about-dark {
+    background-color: #111111;
+    background-image: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* --- Portföy captions: başlık ortada, hover'da üste kayar --- */
+figure.effect-bubba figcaption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 14px;
+}
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after { top: 18px; right: 18px; bottom: 18px; left: 18px; }
+figure.effect-bubba h2 {
+    padding: 0;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+figure.effect-bubba p {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    right: 16px;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate3d(0, 14px, 0);
+    transform: translate3d(0, 14px, 0);
+}
+figure.effect-bubba:hover h2 {
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+}
+
+/* --- Mobil ince ayarlar --- */
+@media (max-width: 767px) {
+    .section-title p { margin: 16px 0 20px; font-size: 16px; line-height: 26px; }
+    #portfolio { padding-bottom: 0; }
+    #about.services-section { padding-top: 0; }
+}
+
+/* --- Başlıklar scroll ile fade in --- */
+.section-title.reveal { opacity: 0; -webkit-transform: translateY(28px); transform: translateY(28px); }
+.section-title.reveal.revealed { opacity: 1; -webkit-transform: none; transform: none; }
+
+/* --- Header logo: daha büyük --- */
+.navbar-brand img { height: 58px; }
+.navbar-default.navbar-shrink .navbar-brand img { height: 42px; }
+body { padding-top: 90px; }
+
+/* --- Footer blokları mobilde aralıklı --- */
+@media (max-width: 767px) {
+    .footer-cols > div { margin-bottom: 32px; }
+    .footer-cols > div:last-child { margin-bottom: 0; }
+}
+
+/* --- Mobil: logo ortalı, menü tam ekran --- */
+@media (max-width: 767px) {
+    .navbar-header { position: relative; }
+    .navbar-brand { float: none; display: block; text-align: center; margin: 0; padding: 2px 0; }
+    .navbar-brand img { height: 46px; display: inline-block; }
+    .navbar-toggle { position: absolute; right: 0; top: 50%; margin: -17px 0 0; float: none; z-index: 1060; }
+    body { padding-top: 78px; }
+
+    #mainNavCollapse {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 110px 24px 40px;
+        background: linear-gradient(160deg, #1a1a1a 0%, #000000 100%);
+        border: 0;
+        z-index: 1050;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #mainNavCollapse .navbar-nav { float: none !important; margin: 0; }
+    #mainNavCollapse .navbar-nav > li { float: none; display: block; text-align: center; }
+    #mainNavCollapse .nav li a {
+        display: inline-block;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #ffffff;
+        border: 0;
+        margin: 22px 0;
+        padding: 0 0 8px;
+    }
+    #mainNavCollapse .nav li a:hover,
+    #mainNavCollapse .nav-link-active { color: #B79596; }
+    body.nav-acik { overflow: hidden; }
+}
+
+/* --- Kişi kartları: kiremit -> koyu kiremit gradyan --- */
+.person-card {
+    background: linear-gradient(135deg, #8B393A 0%, #5A1F20 100%);
+}
+
+/* ============================================================
+   HIZMETLER METIN ANIMASYONU (KALDIRILABILIR)
+   Kaldirmak icin bu blogu ve app.js'teki HIZMET_ANIM blogunu silin.
+   ============================================================ */
+.mz-about-container p .w {
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-transition: background-color .18s ease, color .18s ease;
+    transition: background-color .18s ease, color .18s ease;
+}
+.mz-about-container p .w-read {
+    background-color: #ECECEC;
+    color: inherit;
+}
+.mz-about-container p .w-box {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+/* --- İlk portföy: otomatik hover durumu --- */
+figure.effect-bubba.is-hover img { opacity: 0.5; }
+figure.effect-bubba.is-hover figcaption { background: rgba(10, 10, 10, 0.72); }
+figure.effect-bubba.is-hover figcaption::before,
+figure.effect-bubba.is-hover figcaption::after { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+figure.effect-bubba.is-hover h2 { -webkit-transform: translate3d(0, -20px, 0); transform: translate3d(0, -20px, 0); }
+figure.effect-bubba.is-hover p { opacity: 1; -webkit-transform: translate3d(0, 2px, 0); transform: translate3d(0, 2px, 0); }
+
+/* ============================================================
+   SON REVIZYONLAR (navbar, logo, hizmet metni)
+   ============================================================ */
+
+/* --- Web navbar: linkler altı çizili --- */
+@media (min-width: 768px) {
+    .navbar-default .nav li a { border-bottom: 1px solid #0a0a0a; }
+    .navbar-default .nav li a:hover, .navbar-default .nav li a:focus { border-color: #8B393A; }
+}
+
+/* --- Logo daha büyük + beyaz paddingli zemin --- */
+.navbar-brand img {
+    box-sizing: content-box;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+}
+.navbar-default.navbar-shrink .navbar-brand img { height: 50px; padding: 3px 10px; }
+body { padding-top: 116px; }
+
+@media (max-width: 767px) {
+    .navbar-brand img { height: 60px; padding: 3px 10px; }
+    body { padding-top: 96px; }
+    .navbar-toggle { right: 12px; }
+}
+
+/* --- Portfolyo: Instagram linki (ikon + kelime) kiremit --- */
+.section-title p .ig-link, .section-title p .ig-link .fa { color: #8B393A; }
+.section-title p .ig-link:hover { color: #5A1F20; }
+
+/* --- Hizmetler metni: yavaş fade in --- */
+.mz-about-container p.reveal {
+    -webkit-transition: opacity 1.6s ease, -webkit-transform 1.6s ease;
+    transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+/* --- Okunan kelimeler: beyaz arka plan --- */
+.mz-about-container p .w-read { background-color: #FFFFFF; transition: background-color .45s ease; }
+
+/* --- Animasyon bitince hover'da okunan kelimelerin beyaz kutusu yumuşakça sönsün --- */
+.mz-about-container p.anim-bitti:hover .w-read { background-color: transparent; }
+
+/* ============================================================
+   PORTFÖY: MOBİLDE FADE IN
+   ============================================================ */
+.ot-portfolio-item figure.effect-bubba img { aspect-ratio: 850 / 600; }
+@media (min-width: 768px) {
+    .ot-portfolio-item.reveal,
+    .ot-portfolio-item.reveal.revealed {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+@media (max-width: 767px) {
+    .ot-portfolio-item.reveal {
+        -webkit-transform: none;
+        transform: none;
+        -webkit-transition: opacity .9s ease;
+        transition: opacity .9s ease;
+    }
+    .ot-portfolio-item.reveal.revealed {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
