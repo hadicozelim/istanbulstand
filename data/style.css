@@ -1103,3 +1103,72 @@ body { padding-top: 116px; }
         transform: none;
     }
 }
+
+/* ============================================================
+   AURORA BAŞLIK ANİMASYONU (harf içi renk akışı)
+   Açık zemin -> bordo tonları
+   Koyu zemin  -> beyaz/gri tonları (.section-title--dark)
+   Kaldırmak için: bu bloğu silin. (JS gerektirmez)
+   ============================================================ */
+
+.section-title {
+    --a-base: #812021;
+    --a-img:
+        radial-gradient(closest-side, #B79596, rgba(183,149,150,0) 72%),
+        radial-gradient(closest-side, #AC8081, rgba(172,128,129,0) 72%),
+        radial-gradient(closest-side, #8B393A, rgba(139,57,58,0) 72%),
+        radial-gradient(closest-side, #5A1F20, rgba(90,31,32,0) 72%);
+    --a-size: 62% 130%, 55% 140%, 70% 120%, 50% 135%;
+    --a-pos: -15% -30%, 115% 0%, 0% 130%, 120% 120%;
+}
+
+.section-title.section-title--dark {
+    --a-base: #ffffff;
+    --a-img:
+        radial-gradient(closest-side, #FFFFFF, rgba(255,255,255,0) 72%),
+        radial-gradient(closest-side, #E6E6E6, rgba(230,230,230,0) 72%),
+        radial-gradient(closest-side, #B1ACAE, rgba(177,172,174,0) 72%),
+        radial-gradient(closest-side, #8A8A8E, rgba(138,138,142,0) 72%);
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    line-height: normal;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--a-base, #812021);
+    background-image: var(--a-img);
+    background-size: var(--a-size);
+    background-repeat: no-repeat;
+    background-position: var(--a-pos);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: aurora-text 14s ease-in-out infinite alternate;
+    will-change: background-position;
+}
+
+/* İletişim başlığı da açık zeminde bordo tonlarında */
+.contact-section .section-title h2 {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--a-base, #812021);
+    background-image: var(--a-img);
+    background-size: var(--a-size);
+    background-repeat: no-repeat;
+    background-position: var(--a-pos);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.contact-section .section-title h2::after { background: linear-gradient(90deg, #812021, #B79596); }
+
+@keyframes aurora-text {
+    0%   { background-position: -15% -30%, 115% 0%,   0% 130%, 120% 120%; }
+    25%  { background-position:  55% 120%,  15% 115%, 75%  15%,   5% -25%; }
+    50%  { background-position: 120%  40%, -30%  90%, 115% 85%,  45%  25%; }
+    75%  { background-position:  25% -30%,  75%  10%, 15% 135%,  95% 105%; }
+    100% { background-position: -15% -30%, 115% 0%,   0% 130%, 120% 120%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .section-title h2 { animation: none; }
+}
