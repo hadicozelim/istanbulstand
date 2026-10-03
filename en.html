@@ -8,9 +8,9 @@
   <meta name="keywords" content="expo stand, mall stand, congress stand, exhibition stand, interior design, Istanbul stand">
   <meta name="author" content="Istanbul Stand">
   <title>Istanbul STAND - Expo &amp; Mall Stands - Design &amp; Production</title>
-  <link rel="canonical" href="https://www.istanbulstand.com/indexen.html">
+  <link rel="canonical" href="https://www.istanbulstand.com/en.html">
   <link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/">
-  <link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/indexen.html">
+  <link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/en.html">
   <link rel="alternate" hreflang="x-default" href="https://www.istanbulstand.com/">
   <link rel="icon" href="data/ist-logo.png">
 
@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Istanbul Stand">
   <meta property="og:title" content="Istanbul STAND - Expo &amp; Mall Stands - Design &amp; Production">
   <meta property="og:description" content="Turnkey expo stands, mall stands, congress stands and interior design projects.">
-  <meta property="og:url" content="https://www.istanbulstand.com/indexen.html">
+  <meta property="og:url" content="https://www.istanbulstand.com/en.html">
   <meta property="og:image" content="https://www.istanbulstand.com/data/ibb.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -33,7 +33,7 @@
     "@type": "LocalBusiness",
     "name": "Istanbul Stand",
     "image": "https://www.istanbulstand.com/data/ist-logo.png",
-    "url": "https://www.istanbulstand.com/indexen.html",
+    "url": "https://www.istanbulstand.com/en.html",
     "telephone": "+90 312 436 06 24",
     "email": "info@istanbulstand.com",
     "description": "Expo stands, mall stands, congress stands, museum exhibition and interior design projects. Turnkey from design to production.",
@@ -44,8 +44,58 @@
     "sameAs": ["https://www.instagram.com/istanbulstand/"]
   }
   </script>
+
+  <!-- === Page lock (password protection) === -->
+  <style>
+  #kilit{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a0a0a 0%,#262626 55%,#3a1a1a 100%);padding:20px;}
+  #kilit .kilit-kutu{background:#ffffff;padding:32px 28px;border-radius:10px;max-width:330px;width:100%;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.45);}
+  #kilit .kilit-ikon{font-size:34px;color:#8B393A;}
+  #kilit h2{color:#0a0a0a;font-size:19px;margin:12px 0 6px;}
+  #kilit p{color:#5B5E66;font-size:13px;margin:0 0 16px;line-height:1.5;}
+  #kilit input{width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #CECBCC;border-radius:6px;font-size:15px;color:#0a0a0a;outline:none;}
+  #kilit input:focus{border-color:#8B393A;}
+  #kilit button{margin-top:12px;width:100%;padding:11px;border:0;border-radius:6px;background:#8B393A;color:#ffffff;font-size:15px;font-weight:600;cursor:pointer;}
+  #kilit button:hover{background:#5A1F20;}
+  #kilit .kilit-hata{color:#812021;font-size:13px;margin-top:10px;min-height:16px;}
+  </style>
 </head>
 <body id="page-top">
+
+  <!-- === Page lock === -->
+  <div id="kilit">
+    <div class="kilit-kutu">
+      <div class="kilit-ikon"><i class="fa fa-lock"></i></div>
+      <h2>Protected Page</h2>
+      <p>Please enter the password to view this page.</p>
+      <input id="kilitSifre" type="password" placeholder="Password" autocomplete="off">
+      <button id="kilitBtn" type="button">Enter</button>
+      <div class="kilit-hata" id="kilitHata"></div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var SIFRE = "Hadi*";
+    var kilit = document.getElementById("kilit");
+    if (!kilit) return;
+    try { if (sessionStorage.getItem("is_unlocked") === "1") { kilit.parentNode.removeChild(kilit); return; } } catch (e) {}
+    document.documentElement.style.overflow = "hidden";
+    var girdi = document.getElementById("kilitSifre");
+    function dene() {
+      if (girdi.value === SIFRE) {
+        try { sessionStorage.setItem("is_unlocked", "1"); } catch (e) {}
+        document.documentElement.style.overflow = "";
+        kilit.parentNode.removeChild(kilit);
+      } else {
+        document.getElementById("kilitHata").textContent = "Incorrect password, please try again.";
+        girdi.value = "";
+        girdi.focus();
+      }
+    }
+    document.getElementById("kilitBtn").addEventListener("click", dene);
+    girdi.addEventListener("keydown", function (e) { if (e.key === "Enter") dene(); });
+    girdi.focus();
+  })();
+  </script>
 
   <!-- Navigation -->
   <nav class="navbar navbar-default" id="mainNav">
