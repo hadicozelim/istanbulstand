@@ -92,7 +92,8 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) {
           en.target.classList.add("revealed");
-          io.unobserve(en.target);
+        } else {
+          en.target.classList.remove("revealed");
         }
       });
     }, { threshold: 0.15 });
@@ -144,7 +145,9 @@
             if (/\.$/.test(kelime)) bekle += 500; /* noktadan sonra .5sn ek bekleme */
             setTimeout(adim, bekle);
           } else {
-            hizmetP.classList.add("anim-bitti");
+            setTimeout(function () {
+              hizmetP.classList.add("anim-bitti");
+            }, 400);
             setTimeout(function () {
               smoothScrollTo(window.pageYOffset + 120);
             }, 1000);

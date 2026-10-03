@@ -1074,8 +1074,8 @@ body { padding-top: 116px; }
 /* --- Okunan kelimeler: beyaz arka plan --- */
 .mz-about-container p .w-read { background-color: #FFFFFF; transition: background-color .45s ease; }
 
-/* --- Animasyon bitince hover'da okunan kelimelerin beyaz kutusu yumuşakça sönsün --- */
-.mz-about-container p.anim-bitti:hover .w-read { background-color: transparent; }
+/* --- Animasyon bitince okunan kelimelerin beyaz kutusu yumuşakça sönsün (transparent) --- */
+.mz-about-container p.anim-bitti .w-read { background-color: transparent; }
 
 /* ============================================================
    PORTFÖY: MOBİLDE FADE IN
