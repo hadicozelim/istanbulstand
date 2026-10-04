@@ -1431,7 +1431,7 @@ body { padding-top: 116px; }
 /* --- 2) Web görünümünde: metinler sola yaslı, okla çakışmasın --- */
 @media (min-width: 768px) {
     .ot-slide img { height: 680px; }
-    .ot-slide-cap { padding-left: 64px; padding-bottom: 76px; }
+    .ot-slide-cap { padding-left: 120px; padding-bottom: 200px; }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
 
