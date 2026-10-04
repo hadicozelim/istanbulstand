@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.istanbulstand.com/sitemap.xml
+Sitemap: https://hadicozelim.github.io/istanbulstand/sitemap.xml

@@ -57,8 +57,6 @@
       e.preventDefault();
       var y = hedef.getBoundingClientRect().top + window.pageYOffset - navbarYuksekligi() + 1;
       smoothScrollTo(y);
-      if (window.history && history.pushState) history.pushState(null, "", hedefId);
-      else location.hash = hedefId;
       if (navCollapse && navCollapse.classList.contains("in")) {
         navCollapse.classList.remove("in");
         if (navToggle) navToggle.setAttribute("aria-expanded", "false");
@@ -83,7 +81,6 @@
       btLink.addEventListener("click", function (e) {
         e.preventDefault();
         smoothScrollTo(0);
-        if (window.history && history.pushState) history.pushState(null, "", location.pathname + location.search);
       });
     }
   }
@@ -188,39 +185,6 @@
   /* --- Footer yılı --- */
   var yil = document.getElementById("yil");
   if (yil) yil.textContent = new Date().getFullYear();
-})();
-
-/* --- Derin baglanti (# capa) ve geri/ileri gezinme --- */
-(function () {
-  function hedefBul(h) {
-    if (!h || h.length < 2) return null;
-    try { return document.querySelector(h); } catch (e) { return null; }
-  }
-  function kaydir(h, yumusak) {
-    var el = hedefBul(h);
-    if (!el) return;
-    var nav = document.getElementById("mainNav");
-    var ofs = nav ? nav.offsetHeight : 0;
-    var y = el.getBoundingClientRect().top + window.pageYOffset - ofs + 1;
-    if (!yumusak || Math.abs(y - window.pageYOffset) < 2) { window.scrollTo(0, y); return; }
-    var root = document.documentElement;
-    var prev = root.style.scrollBehavior;
-    root.style.scrollBehavior = "auto";
-    var s = window.pageYOffset, d = y - s, t0 = null;
-    var dur = Math.min(900, Math.max(400, Math.abs(d) * 0.6));
-    var ease = function (t) { return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; };
-    var step = function (ts) {
-      if (t0 === null) t0 = ts;
-      var p = Math.min(1, (ts - t0) / dur);
-      window.scrollTo(0, s + d * ease(p));
-      if (p < 1) requestAnimationFrame(step); else root.style.scrollBehavior = prev;
-    };
-    requestAnimationFrame(step);
-  }
-  window.addEventListener("hashchange", function () { kaydir(location.hash, true); });
-  window.addEventListener("load", function () {
-    if (location.hash && location.hash.length > 1) setTimeout(function () { kaydir(location.hash, false); }, 80);
-  });
 })();
 
 /* --- Portfolyo slider --- */

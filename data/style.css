@@ -1225,3 +1225,118 @@ body { padding-top: 116px; }
 @media (prefers-reduced-motion:reduce){
   .ot-slider-dots button{transition:none}
 }
+
+/* ==========================================================================
+   Slider: tam genislik + header'a bitisik + hero tipografi
+   ========================================================================== */
+#portfolio{padding:0 0 90px}
+#portfolio .section-title{padding-top:58px}
+.ot-slider{width:100%;margin:0;border-radius:0;box-shadow:none}
+.ot-slide img{width:100%;height:clamp(340px,62vh,700px);aspect-ratio:auto;object-fit:cover}
+.ot-slide-cap{padding:clamp(70px,10vw,130px) clamp(18px,4vw,56px) clamp(26px,3.2vw,46px);background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.62) 42%,rgba(0,0,0,.92) 100%)}
+.ot-slide-cap-in{max-width:1180px;margin:0 auto}
+.ot-slide-cap h3{font-size:clamp(25px,3.5vw,48px);font-weight:800;line-height:1.14;letter-spacing:-.5px;margin:0 0 14px}
+.ot-slide-cap p{font-size:clamp(15px,1.15vw,19px);line-height:1.65;max-width:840px;margin:0 0 22px}
+.ot-slider-btn{font-size:clamp(14px,1vw,16px);padding:13px 30px;border-radius:6px;letter-spacing:.3px}
+.ot-slider-nav{width:54px;height:54px;font-size:24px}
+.ot-slider-prev{left:22px}
+.ot-slider-next{right:22px}
+.ot-slider-dots{right:clamp(18px,4vw,56px);bottom:clamp(18px,2.4vw,34px);gap:10px}
+.ot-slider-dots button{width:10px;height:10px}
+.ot-slider-dots button.is-active{width:30px}
+.ot-slider-all{margin-top:34px}
+
+/* ==========================================================================
+   Portfolyo sayfasi: elegans hover kartlari
+   ========================================================================== */
+.ot-page-pad{padding:46px 0 62px}
+.ot-page-h1{font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.1;letter-spacing:-1.2px;color:#0a0a0a;margin:0 0 16px}
+.ot-page-intro{font-size:clamp(16px,1.25vw,19px);color:#4a4a4a;line-height:1.7;max-width:780px;margin:0 auto 54px}
+.ot-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:34px}
+.ot-card{position:relative;background:#ffffff;border:1px solid #ededed;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.05);opacity:0;animation:otCardIn .7s ease forwards;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+@keyframes otCardIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.ot-card::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:#8B393A;transform:scaleX(0);transform-origin:left center;transition:transform .4s ease;z-index:3}
+.ot-card:hover{transform:translateY(-9px);box-shadow:0 24px 50px rgba(0,0,0,.13);border-color:#e7d6d6}
+.ot-card:hover::after{transform:scaleX(1)}
+.ot-card-link{display:block;color:inherit}
+.ot-card-link:hover{color:inherit;text-decoration:none}
+.ot-card-media{display:block;overflow:hidden;background:#0a0a0a}
+.ot-card-media img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;transition:transform .55s ease}
+.ot-card:hover .ot-card-media img{transform:scale(1.07)}
+.ot-card-body{display:block;padding:24px 26px 28px}
+.ot-card-body h3{display:block;font-size:20px;font-weight:700;line-height:1.35;color:#0a0a0a;margin:0 0 10px;transition:color .3s ease}
+.ot-card:hover .ot-card-body h3{color:#8B393A}
+.ot-card-body p{display:block;font-size:15px;line-height:1.7;color:#555555;margin:0 0 16px}
+.ot-card-cta{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#8B393A}
+.ot-card-cta i{transition:transform .3s ease}
+.ot-card:hover .ot-card-cta i{transform:translateX(7px)}
+
+/* ==========================================================================
+   Sabit WhatsApp butonu (yukari cik okunun ustunde)
+   ========================================================================== */
+.ot-whatsapp{position:fixed;right:50px;bottom:118px;z-index:1000;width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:27px;text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.3);transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.ot-whatsapp:hover,.ot-whatsapp:focus{background:#812021;color:#ffffff;transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.36);text-decoration:none}
+
+@media (max-width:767px){
+  #portfolio{padding:0 0 70px}
+  #portfolio .section-title{padding-top:42px}
+  .ot-slide img{height:clamp(300px,52vh,460px)}
+  .ot-slide-cap{padding:44px 16px 16px}
+  .ot-slide-cap p{display:none}
+  .ot-slider-nav{width:38px;height:38px;font-size:17px}
+  .ot-slider-prev{left:10px}
+  .ot-slider-next{right:10px}
+  .ot-cards{grid-template-columns:1fr;gap:24px}
+  .ot-card-body{padding:20px 22px 24px}
+  .ot-whatsapp{right:30px;bottom:92px;width:48px;height:48px;font-size:23px}
+}
+@media (max-width:480px){
+  .ot-whatsapp{right:30px;bottom:58px;width:42px;height:42px;font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){
+  .ot-card{animation:none;opacity:1}
+  .ot-card:hover{transform:none}
+}
+
+/* ==========================================================================
+   Duzeltme 1: giris animasyonu kartin disina tasindi (hover hareketi calissin)
+   ========================================================================== */
+.ot-card{animation:none;opacity:1;will-change:transform}
+.ot-card-wrap{opacity:0;animation:otCardIn .7s ease both}
+
+/* ==========================================================================
+   Duzeltme 2: mobilde WhatsApp butonu yukari cik okunun ustunde kalsin
+   ========================================================================== */
+@media (max-width:767px){
+  .ot-whatsapp{bottom:104px}
+}
+@media (max-width:480px){
+  .ot-whatsapp{bottom:78px}
+}
+
+/* ==========================================================================
+   Duzeltme 3: header yizsekligi = govde boslugu (slider header'a bitisik)
+   Onceki durumda navbar 74px, logo tasarak 105px, icerik 116px => 42px bosluk
+   ========================================================================== */
+.navbar-brand { height: auto; line-height: 0; display: flex; align-items: center; }
+@media (min-width: 768px) {
+    nav.navbar-default { padding: 14px 0; }
+}
+@media (max-width: 767px) {
+    nav.navbar-default { padding: 15px 0; }
+}
+
+/* ==========================================================================
+   Duzeltme 4: navbar yuksekligi govde bosluguyla birebir esitlendi
+   (slider header'in altina tam oturur, ortalanir)
+   ========================================================================== */
+.navbar-brand { height: auto; padding: 0; line-height: 0; display: flex; align-items: center; }
+.navbar-header { height: auto; }
+@media (min-width: 768px) {
+    nav.navbar-default { height: 116px; padding: 0; display: flex; align-items: center; }
+    nav.navbar-default.navbar-shrink { height: 66px; padding: 0; }
+}
+@media (max-width: 767px) {
+    nav.navbar-default { height: 96px; padding: 0; display: flex; align-items: center; }
+    nav.navbar-default.navbar-shrink { height: 62px; padding: 0; }
+}
