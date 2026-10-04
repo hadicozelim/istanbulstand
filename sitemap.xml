@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.istanbulstand.com/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.istanbulstand.com/"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.istanbulstand.com/"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/portfolio.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/portfolio-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/portfolio-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/portfolio-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/fuar-standlari.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/fuar-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/fuar-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/fuar-standlari-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/fuar-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/fuar-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/avm-standlari.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/avm-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/avm-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/avm-standlari-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/avm-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/avm-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/etkinlik-alanlari.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/etkinlik-alanlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/etkinlik-alanlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/etkinlik-alanlari-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/etkinlik-alanlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/etkinlik-alanlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/pavilion.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/pavilion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/pavilion-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/pavilion-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/pavilion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/pavilion-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/kongre-standlari.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/kongre-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/kongre-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/kongre-standlari-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/kongre-standlari.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/kongre-standlari-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/ic-mekan.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/ic-mekan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/ic-mekan-en.html"/>
+  </url>
+  <url>
+    <loc>https://www.istanbulstand.com/ic-mekan-en.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.istanbulstand.com/ic-mekan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/ic-mekan-en.html"/>
+  </url>
+</urlset>

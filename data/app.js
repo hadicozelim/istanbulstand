@@ -57,6 +57,8 @@
       e.preventDefault();
       var y = hedef.getBoundingClientRect().top + window.pageYOffset - navbarYuksekligi() + 1;
       smoothScrollTo(y);
+      if (window.history && history.pushState) history.pushState(null, "", hedefId);
+      else location.hash = hedefId;
       if (navCollapse && navCollapse.classList.contains("in")) {
         navCollapse.classList.remove("in");
         if (navToggle) navToggle.setAttribute("aria-expanded", "false");
@@ -81,6 +83,7 @@
       btLink.addEventListener("click", function (e) {
         e.preventDefault();
         smoothScrollTo(0);
+        if (window.history && history.pushState) history.pushState(null, "", location.pathname + location.search);
       });
     }
   }
@@ -185,4 +188,79 @@
   /* --- Footer yılı --- */
   var yil = document.getElementById("yil");
   if (yil) yil.textContent = new Date().getFullYear();
+})();
+
+/* --- Derin baglanti (# capa) ve geri/ileri gezinme --- */
+(function () {
+  function hedefBul(h) {
+    if (!h || h.length < 2) return null;
+    try { return document.querySelector(h); } catch (e) { return null; }
+  }
+  function kaydir(h, yumusak) {
+    var el = hedefBul(h);
+    if (!el) return;
+    var nav = document.getElementById("mainNav");
+    var ofs = nav ? nav.offsetHeight : 0;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - ofs + 1;
+    if (!yumusak || Math.abs(y - window.pageYOffset) < 2) { window.scrollTo(0, y); return; }
+    var root = document.documentElement;
+    var prev = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    var s = window.pageYOffset, d = y - s, t0 = null;
+    var dur = Math.min(900, Math.max(400, Math.abs(d) * 0.6));
+    var ease = function (t) { return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; };
+    var step = function (ts) {
+      if (t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur);
+      window.scrollTo(0, s + d * ease(p));
+      if (p < 1) requestAnimationFrame(step); else root.style.scrollBehavior = prev;
+    };
+    requestAnimationFrame(step);
+  }
+  window.addEventListener("hashchange", function () { kaydir(location.hash, true); });
+  window.addEventListener("load", function () {
+    if (location.hash && location.hash.length > 1) setTimeout(function () { kaydir(location.hash, false); }, 80);
+  });
+})();
+
+/* --- Portfolyo slider --- */
+(function () {
+  Array.prototype.slice.call(document.querySelectorAll(".ot-slider")).forEach(function (sl) {
+    var items = sl.querySelectorAll(".ot-slide");
+    if (items.length < 2) return;
+    var i = 0, timer = null, sure = 6000;
+    var dots = sl.querySelector(".ot-slider-dots");
+    var btnDots = [];
+    if (dots) {
+      for (var d = 0; d < items.length; d++) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Slayt " + (d + 1));
+        (function (n) { b.addEventListener("click", function () { git(n); baslat(); }); })(d);
+        dots.appendChild(b);
+        btnDots.push(b);
+      }
+    }
+    function git(n) {
+      i = (n + items.length) % items.length;
+      for (var k = 0; k < items.length; k++) {
+        items[k].classList.toggle("is-active", k === i);
+        if (btnDots[k]) btnDots[k].classList.toggle("is-active", k === i);
+      }
+    }
+    function durdur() { if (timer) { clearInterval(timer); timer = null; } }
+    function baslat() { durdur(); timer = setInterval(function () { git(i + 1); }, sure); }
+    var prev = sl.querySelector(".ot-slider-prev");
+    var next = sl.querySelector(".ot-slider-next");
+    if (prev) prev.addEventListener("click", function () { git(i - 1); baslat(); });
+    if (next) next.addEventListener("click", function () { git(i + 1); baslat(); });
+    sl.addEventListener("mouseenter", durdur);
+    sl.addEventListener("mouseleave", baslat);
+    sl.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { git(i - 1); baslat(); }
+      if (e.key === "ArrowRight") { git(i + 1); baslat(); }
+    });
+    git(0);
+    baslat();
+  });
 })();

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="İstanbul Stand; fuar standı, AVM standı, kongre standı, müze teşhir tanzim ve iç mimarlık projelerinde tasarımdan imalata anahtar teslim çözümler sunar.">
   <meta name="keywords" content="stand, İstanbul, İstanbul stand, fuar, fuar standı, avm standı, fuar stand, avm stand, kongre standı, müze teşhir tanzim">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#812021">
   <meta name="author" content="İstanbul Stand">
   <title>İstanbul STAND - Fuar &amp; AVM Standı - Tasarım &amp; İmalat</title>
   <link rel="canonical" href="https://www.istanbulstand.com/">
@@ -13,6 +15,7 @@
   <link rel="alternate" hreflang="en" href="https://www.istanbulstand.com/en.html">
   <link rel="alternate" hreflang="x-default" href="https://www.istanbulstand.com/">
   <link rel="icon" href="data/ist-logo.png">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
 
   <!-- Sosyal paylaşım -->
   <meta property="og:type" content="website">
@@ -22,7 +25,11 @@
   <meta property="og:description" content="Fuar standı, AVM standı, kongre standı ve iç mimarlık projelerinde tasarımdan imalata anahtar teslim çözümler.">
   <meta property="og:url" content="https://www.istanbulstand.com/">
   <meta property="og:image" content="https://www.istanbulstand.com/data/ibb.jpg">
+  <meta property="og:image:alt" content="İstanbul Stand fuar standı ve iç mekan tasarım projeleri">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="İstanbul STAND - Fuar & AVM Standı - Tasarım & İmalat">
+  <meta name="twitter:description" content="Fuar standı, AVM standı, kongre standı ve iç mimarlık projelerinde tasarımdan imalata anahtar teslim çözümler.">
+  <meta name="twitter:image" content="https://www.istanbulstand.com/data/ibb.jpg">
 
   <link href="data/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="data/font-awesome.min.css">
@@ -75,7 +82,7 @@
   </div>
   <script>
   (function () {
-    var SIFRE = "TuW4Z";
+    var SIFRE = "78459";
     var kilit = document.getElementById("kilit");
     if (!kilit) return;
     try { if (sessionStorage.getItem("is_unlocked") === "1") { kilit.parentNode.removeChild(kilit); return; } } catch (e) {}
@@ -124,6 +131,8 @@
     </div>
   </nav>
 
+  <h1 class="sr-only">İstanbul Stand - Fuar Standı, AVM Standı, Kongre Standı ve İç Mekan Tasarımı</h1>
+
   <!-- Portfolyo -->
   <section id="portfolio">
     <div class="container">
@@ -139,77 +148,65 @@
           </div>
         </div>
       </div>
-      <div class="row row-0-gutter">
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="Yurt içi ve yurt dışı fuar standı imalatı" class="img-responsive" loading="lazy" width="850" height="600" src="data/ibb.jpg">
-              <figcaption>
-                <h2>Yurt İçi &amp; Yurt Dışı Fuar Standları</h2>
-                <p>Markaya özel üretimler, renklerin kullanımı, doğru sergileme, alanın optimum kullanımı</p>
-              </figcaption>
-            </figure>
+
+      <div class="ot-slider reveal" id="otSlider">
+        <div class="ot-slider-track">
+        <article class="ot-slide is-active">
+          <img src="data/ibb.jpg" alt="Yurt içi ve yurt dışı fuar standı imalatı" width="850" height="600">
+          <div class="ot-slide-cap">
+            <h3>Yurt İçi & Yurt Dışı Fuar Standları</h3>
+            <p>Markaya özel üretimler, renklerin kullanımı, doğru sergileme, alanın optimum kullanımı</p>
+            <a class="ot-slider-btn" href="fuar-standlari.html">Detaylar</a>
           </div>
-        </div>
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="Yurt içi ve yurt dışı AVM standı uygulaması" class="img-responsive" loading="lazy" width="850" height="600" src="data/magnum.jpg">
-              <figcaption>
-                <h2>Yurt İçi &amp; Yurt Dışı AVM Standları</h2>
-                <p>İç mekan, dış mekan, gıda standları, ürün tanıtım standları. Tasarımdan imalata kadar anahtar teslim projeler</p>
-              </figcaption>
-            </figure>
+        </article>
+        <article class="ot-slide">
+          <img src="data/magnum.jpg" alt="Yurt içi ve yurt dışı AVM standı uygulaması" width="850" height="600" loading="lazy">
+          <div class="ot-slide-cap">
+            <h3>Yurt İçi & Yurt Dışı AVM Standları</h3>
+            <p>İç mekan, dış mekan, gıda standları, ürün tanıtım standları. Tasarımdan imalata kadar anahtar teslim projeler</p>
+            <a class="ot-slider-btn" href="avm-standlari.html">Detaylar</a>
           </div>
+        </article>
+        <article class="ot-slide">
+          <img src="data/bagc.jpg" alt="Büyük etkinlik alanları stand tasarımı" width="850" height="600" loading="lazy">
+          <div class="ot-slide-cap">
+            <h3>Büyük Etkinlik Alanları</h3>
+            <p>Özel taleplere özel üretimler. Ahşaptan demire, brandadan cam malzemeye kadar ürün yelpazesi. Açık alan / kapalı alan uygulamalar</p>
+            <a class="ot-slider-btn" href="etkinlik-alanlari.html">Detaylar</a>
+          </div>
+        </article>
+        <article class="ot-slide">
+          <img src="data/tcdd2.jpg" alt="Pavilion ve büyük fuar standı projeleri" width="850" height="600" loading="lazy">
+          <div class="ot-slide-cap">
+            <h3>Pavilion / Büyük Fuar Standları</h3>
+            <p>Şirket, ülke, meslek örgütü veya büyük kamu kurumları için yüzlerce metrekare fuar standları</p>
+            <a class="ot-slider-btn" href="pavilion.html">Detaylar</a>
+          </div>
+        </article>
+        <article class="ot-slide">
+          <img src="data/nish.jpg" alt="Kongre ve sempozyum standı" width="850" height="600" loading="lazy">
+          <div class="ot-slide-cap">
+            <h3>Kongre Standları</h3>
+            <p>Kongre, sempozyum ve etkinlikler için kısa süreli, küçük ebatlı stand projeleri</p>
+            <a class="ot-slider-btn" href="kongre-standlari.html">Detaylar</a>
+          </div>
+        </article>
+        <article class="ot-slide">
+          <img src="data/magni.jpg" alt="İç mekan tasarım ve uygulama" width="850" height="600" loading="lazy">
+          <div class="ot-slide-cap">
+            <h3>İç Mekan Tasarım & Uygulama</h3>
+            <p>Satış ofisinden cafeye, restauranttan sağlık merkezine. Tüm projelerde anahtar teslim işbirliği</p>
+            <a class="ot-slider-btn" href="ic-mekan.html">Detaylar</a>
+          </div>
+        </article>
         </div>
+        <button class="ot-slider-nav ot-slider-prev" type="button" aria-label="Önceki"><i class="fa fa-angle-left"></i></button>
+        <button class="ot-slider-nav ot-slider-next" type="button" aria-label="Sonraki"><i class="fa fa-angle-right"></i></button>
+        <div class="ot-slider-dots"></div>
       </div>
-      <div class="row row-0-gutter">
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="Büyük etkinlik alanları stand tasarımı" class="img-responsive" loading="lazy" width="850" height="600" src="data/bagc.jpg">
-              <figcaption>
-                <h2>Büyük Etkinlik Alanları</h2>
-                <p>Özel taleplere özel üretimler. Ahşaptan demire, brandadan cam malzemeye kadar ürün yelpazesi. Açık alan / kapalı alan uygulamalar</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="Pavilion ve büyük fuar standı projeleri" class="img-responsive" loading="lazy" width="850" height="600" src="data/tcdd2.jpg">
-              <figcaption>
-                <h2>Pavilion / Büyük Fuar Standları</h2>
-                <p>Şirket, ülke, meslek örgütü veya büyük kamu kurumları için yüzlerce metrekare fuar standları</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="row row-0-gutter">
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="Kongre ve sempozyum standı" class="img-responsive" loading="lazy" width="850" height="600" src="data/nish.jpg">
-              <figcaption>
-                <h2>Kongre Standları</h2>
-                <p>Kongre, sempozyum ve etkinlikler için kısa süreli, küçük ebatlı stand projeleri</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col-md-6 col-0-gutter">
-          <div class="ot-portfolio-item reveal">
-            <figure class="effect-bubba">
-              <img alt="İç mekan tasarım ve uygulama" class="img-responsive" loading="lazy" width="850" height="600" src="data/magni.jpg">
-              <figcaption>
-                <h2>İç Mekan Tasarım &amp; Uygulama</h2>
-                <p>Satış ofisinden cafeye, restauranttan sağlık merkezine. Tüm projelerde anahtar teslim işbirliği</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
+
+      <div class="text-center ot-slider-all">
+        <a class="ot-slider-btn ot-slider-btn-dark" href="portfolio.html">Tüm Portfolyo</a>
       </div>
     </div>
   </section>
