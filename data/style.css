@@ -1410,3 +1410,113 @@ body { padding-top: 116px; }
 @media (prefers-reduced-motion: reduce) {
     .ot-hrf { opacity: 1; transform: none; filter: none; animation: none; }
 }
+
+/* ==========================================================================
+   Duzeltme 7: slider gecisi (1sn, sagdan sola fade), tiklanabilir slayt,
+   mobil swipe, Incele butonu, aciklama gorunur, toggle sagda, logosuz kutu,
+   WhatsApp <-> yukari ok yer degisimi, kartlara yan bosluk
+   ========================================================================== */
+
+/* --- 1) Slayt gecisi ve tum slaytin tiklanabilir olmasi --- */
+.ot-slide-in { position: relative; display: block; animation: otInR 1s cubic-bezier(.4,0,.2,1) both; }
+.ot-slider[data-yon="geri"] .ot-slide-in { animation-name: otInL; }
+@keyframes otInR { from { opacity: 0; transform: translate3d(9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
+@keyframes otInL { from { opacity: 0; transform: translate3d(-9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
+.ot-slide-hit { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; display: block; }
+.ot-slide-hit:focus-visible { outline: 2px solid #ffffff; outline-offset: -4px; }
+.ot-slide-cap { z-index: 2; pointer-events: none; }
+.ot-slide-cap .ot-slider-btn { pointer-events: auto; position: relative; z-index: 3; }
+.ot-slider-nav { z-index: 4; }
+
+/* --- 2) Web görünümünde: metinler sola yaslı, okla çakışmasın --- */
+@media (min-width: 768px) {
+    .ot-slide img { height: 680px; }
+    .ot-slide-cap { padding-left: 64px; padding-bottom: 76px; }
+    .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
+}
+
+/* --- 3) İncele butonu: transparan, beyaz border, beyaz yazı, yarım daire --- */
+.ot-slide-cap .ot-incele {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: #ffffff; border: 1px solid #ffffff;
+    padding: 10px 24px; border-radius: 999px;
+}
+.ot-slide-cap .ot-incele:hover,
+.ot-slide-cap .ot-incele:focus { background: #ffffff; color: #8B393A; border-color: #ffffff; text-decoration: none; }
+.ot-slide-cap .ot-incele i { font-size: 13px; }
+
+/* --- 4) Slider altı: buton, cümle, aşağı ok --- */
+#portfolio { position: relative; padding-bottom: 0 !important; }
+.ot-slider-foot { text-align: center; padding: 28px 0 78px; }
+.ot-slider-foot .ot-slider-btn { margin-bottom: 18px; }
+.ot-slider-note { color: #5B5E66; font-size: 15px; line-height: 1.7; margin: 0; }
+.ot-slider-note .ig-link,
+.ot-slider-note .ig-link .fa { color: #8B393A; }
+.ot-slider-note .ig-link:hover { color: #5A1F20; }
+.ot-scroll-down {
+    position: absolute; left: 50%; bottom: 24px; width: 46px; height: 46px; margin-left: -23px;
+    border-radius: 50%; background: rgba(10,10,10,.07); color: #0a0a0a;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+    text-decoration: none; z-index: 6;
+    transition: background .2s ease, color .2s ease;
+    animation: otBounce 2.4s ease-in-out infinite;
+}
+.ot-scroll-down:hover,
+.ot-scroll-down:focus { background: #8B393A; color: #ffffff; text-decoration: none; animation: none; }
+.ot-scroll-down i { margin-top: 7px; }
+@keyframes otBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+
+/* --- 5) Logo: beyaz kutu / border / shadow yok --- */
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active { background: none; border: 0; box-shadow: none; border-radius: 0; padding: 0; color: #ffffff; }
+.navbar-brand img {
+    background: none !important; border: 0 !important; box-shadow: none !important;
+    border-radius: 0 !important; padding: 0 !important; box-sizing: content-box;
+}
+.navbar-default.navbar-shrink .navbar-brand img { padding: 0 !important; }
+
+/* --- 6) Mobil: menü (toggle) butonu sağ kenarda, logo ortada --- */
+@media (max-width: 767px) {
+    /* navbar flex olduğu için .container daralıp logoya göre küçülüyordu */
+    nav.navbar-default > .container { width: 100%; flex: 1 1 auto; }
+    .navbar-header {
+        position: relative; flex: 1 1 auto; width: 100%;
+        margin: 0 !important; padding: 0;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .navbar-header .navbar-brand { flex: 0 0 auto; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; }
+    .navbar-header .navbar-brand img { margin: 0; }
+    .navbar-toggle {
+        position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+        margin: 0; float: none; z-index: 1060;
+    }
+}
+
+/* --- 7) Sağ alt: WhatsApp ve yukarı ok yer değiştirdi --- */
+@media (min-width: 768px) {
+    #back-top { bottom: 118px; }
+    .ot-whatsapp { bottom: 40px; }
+}
+@media (max-width: 767px) {
+    #back-top { bottom: 104px; }
+    .ot-whatsapp { bottom: 20px; }
+}
+
+/* --- 8) Mobil: ok yok, açıklama görünür, kartlara yandan boşluk --- */
+@media (max-width: 767px) {
+    .ot-slide img { height: 440px; }
+    .ot-slider-nav { display: none; }
+    .ot-slide-cap { padding: 84px 16px 36px; }
+    .ot-slide-cap p { display: block; font-size: 13px; line-height: 1.55; margin: 0 0 12px; }
+    .ot-slider-dots { right: 14px; bottom: 14px; }
+    .ot-scroll-down { width: 42px; height: 42px; font-size: 19px; bottom: 20px; }
+    .ot-slider-foot { padding: 24px 0 70px; }
+    .ot-slider-foot .ot-slider-btn { margin-bottom: 14px; }
+    .ot-slider-note { font-size: 14px; }
+    .ot-cards { padding: 0 8px; gap: 22px; }
+}
+@media (max-width: 480px) {
+    .ot-cards { padding: 0 4px; gap: 20px; }
+}

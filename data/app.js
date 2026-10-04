@@ -192,7 +192,7 @@
   Array.prototype.slice.call(document.querySelectorAll(".ot-slider")).forEach(function (sl) {
     var items = sl.querySelectorAll(".ot-slide");
     if (items.length < 2) return;
-    var i = 0, timer = null, sure = 6000;
+    var i = 0, timer = null, sure = 5000;
     var dots = sl.querySelector(".ot-slider-dots");
     var btnDots = [];
     if (dots) {
@@ -212,18 +212,45 @@
         if (btnDots[k]) btnDots[k].classList.toggle("is-active", k === i);
       }
     }
+    function yon(y) { sl.setAttribute("data-yon", y); }
     function durdur() { if (timer) { clearInterval(timer); timer = null; } }
-    function baslat() { durdur(); timer = setInterval(function () { git(i + 1); }, sure); }
+    function baslat() { durdur(); timer = setInterval(function () { yon("ileri"); git(i + 1); }, sure); }
     var prev = sl.querySelector(".ot-slider-prev");
     var next = sl.querySelector(".ot-slider-next");
-    if (prev) prev.addEventListener("click", function () { git(i - 1); baslat(); });
-    if (next) next.addEventListener("click", function () { git(i + 1); baslat(); });
+    if (prev) prev.addEventListener("click", function () { yon("geri"); git(i - 1); baslat(); });
+    if (next) next.addEventListener("click", function () { yon("ileri"); git(i + 1); baslat(); });
     sl.addEventListener("mouseenter", durdur);
     sl.addEventListener("mouseleave", baslat);
     sl.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") { git(i - 1); baslat(); }
-      if (e.key === "ArrowRight") { git(i + 1); baslat(); }
+      if (e.key === "ArrowLeft") { yon("geri"); git(i - 1); baslat(); }
+      if (e.key === "ArrowRight") { yon("ileri"); git(i + 1); baslat(); }
     });
+
+    /* --- Mobilde yatay kaydirma (swipe) --- */
+    var sx = 0, sy = 0, kaydi = false, engelle = false;
+    sl.addEventListener("touchstart", function (e) {
+      var t = e.touches[0];
+      sx = t.clientX; sy = t.clientY; kaydi = false;
+      durdur();
+    }, { passive: true });
+    sl.addEventListener("touchmove", function (e) {
+      var t = e.touches[0];
+      if (Math.abs(t.clientX - sx) > 14 && Math.abs(t.clientX - sx) > Math.abs(t.clientY - sy)) kaydi = true;
+    }, { passive: true });
+    sl.addEventListener("touchend", function (e) {
+      if (kaydi) {
+        var dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 45) { yon(dx < 0 ? "ileri" : "geri"); git(dx < 0 ? i + 1 : i - 1); }
+        engelle = true;
+      }
+      baslat();
+    }, { passive: true });
+    /* kaydirma sonrasi tiklama sayfaya gitmesin */
+    sl.addEventListener("click", function (e) {
+      if (engelle) { e.preventDefault(); e.stopPropagation(); engelle = false; }
+    }, true);
+
+    yon("ileri");
     git(0);
     baslat();
   });
