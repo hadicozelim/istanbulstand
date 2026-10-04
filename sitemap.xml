@@ -1,184 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ============================================================================
-  ISTANBUL STAND - SITE HARITASI (sitemap.xml)
-  ============================================================================
-  Adres    : https://hadicozelim.github.io/istanbulstand
-  Tarih    : 2026-10-04
-  Toplam   : 16 adres (2 ana sayfa + 2 portfolyo + 12 kategori)
-
-  HER URL NEDEN VAR?
-    Ana sayfa      : Sitenin giriş sayfası (TR ve EN)
-    Portfolyo      : Tüm kategorilerin toplandığı liste sayfası (TR ve EN)
-    Kategori       : Her hizmet alanı için ayrı sayfa (TR ve EN)
-
-  ALAN ADLARI (hreflang)
-    Her adres, kendisinin ve karşı dildeki eşdeğerinin adresini "hreflang"
-    etiketiyle bildirir. Böylece arama motorları Türkçe ve İngilizce
-    sürümleri doğru eşleştirir.
-  ============================================================================
--->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- 1) Ana sayfa - Türkçe -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hadicozelim.github.io/istanbulstand/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/en.html"/>
   </url>
-
-  <!-- 2) Ana sayfa - İngilizce -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/en.html"/>
   </url>
-
-  <!-- 3) Portfolyo - Türkçe -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/portfolio.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/portfolio/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/portfolio-en.html"/>
   </url>
-
-  <!-- 4) Portfolyo - İngilizce -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/portfolio-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/portfolio/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/portfolio-en.html"/>
   </url>
-
-  <!-- 05) Kategori: Fuar Standları -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/fuar-standlari.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/fuar-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/fuar-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/fuar-standlari-en.html"/>
   </url>
-
-  <!-- 06) Kategori: Expo Stands -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/fuar-standlari-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/fuar-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/fuar-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/fuar-standlari-en.html"/>
   </url>
-
-  <!-- 07) Kategori: AVM Standları -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/avm-standlari.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/avm-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/avm-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/avm-standlari-en.html"/>
   </url>
-
-  <!-- 08) Kategori: Mall Stands -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/avm-standlari-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/avm-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/avm-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/avm-standlari-en.html"/>
   </url>
-
-  <!-- 09) Kategori: Etkinlik Alanları -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari-en.html"/>
   </url>
-
-  <!-- 10) Kategori: Event Areas -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/etkinlik-alanlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/etkinlik-alanlari-en.html"/>
   </url>
-
-  <!-- 11) Kategori: Pavilion Standları -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/pavilion.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/pavilion/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/pavilion.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/pavilion-en.html"/>
   </url>
-
-  <!-- 12) Kategori: Pavilion Stands -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/pavilion-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/pavilion/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/pavilion.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/pavilion-en.html"/>
   </url>
-
-  <!-- 13) Kategori: Kongre Standları -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/kongre-standlari.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/kongre-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/kongre-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/kongre-standlari-en.html"/>
   </url>
-
-  <!-- 14) Kategori: Congress Stands -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/kongre-standlari-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/kongre-standlari/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/kongre-standlari.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/kongre-standlari-en.html"/>
   </url>
-
-  <!-- 15) Kategori: İç Mekan -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/ic-mekan.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/ic-mekan/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/ic-mekan.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/ic-mekan-en.html"/>
   </url>
-
-  <!-- 16) Kategori: Interior Design -->
   <url>
-    <loc>https://hadicozelim.github.io/istanbulstand/ic-mekan-en.html</loc>
+    <loc>https://hadicozelim.github.io/istanbulstand/en/ic-mekan/</loc>
     <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://hadicozelim.github.io/istanbulstand/ic-mekan.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hadicozelim.github.io/istanbulstand/ic-mekan-en.html"/>
   </url>
-
 </urlset>

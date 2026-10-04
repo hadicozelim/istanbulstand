@@ -1340,3 +1340,73 @@ body { padding-top: 116px; }
     nav.navbar-default { height: 96px; padding: 0; display: flex; align-items: center; }
     nav.navbar-default.navbar-shrink { height: 62px; padding: 0; }
 }
+
+/* ==========================================================================
+   1) Slider daha yuksek ( Anasayfa )
+   ========================================================================== */
+.ot-slide img { height: clamp(430px, 82vh, 900px); }
+.ot-slide-cap { padding: clamp(90px, 13vw, 170px) clamp(18px, 4vw, 56px) clamp(30px, 3.6vw, 52px); }
+.ot-slide-cap h3 { font-size: clamp(27px, 3.9vw, 54px); }
+.ot-slider-all { margin-top: 42px; }
+
+/* ==========================================================================
+   2) Basliklara harf harf fade-in ( ustten alta, sirayla )
+   ========================================================================== */
+.ot-hrf {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-0.5em);
+    filter: blur(7px);
+    will-change: opacity, transform;
+}
+.ot-slide.is-active .ot-hrf-baslik .ot-hrf {
+    animation: otHrf .62s cubic-bezier(.22, .85, .3, 1) both;
+    animation-delay: calc(var(--i) * 42ms);
+}
+.ot-page-h1 .ot-hrf,
+.ot-cat-head h1 .ot-hrf {
+    animation: otHrf .62s cubic-bezier(.22, .85, .3, 1) both;
+    animation-delay: calc(var(--i) * 38ms);
+}
+@keyframes otHrf {
+    from { opacity: 0; transform: translateY(-0.5em); filter: blur(7px); }
+    to   { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* ==========================================================================
+   3) Alt sayfalarda breadcrumb ustundeki bosluk
+   ========================================================================== */
+#kategori { padding: 0; }
+#kategori .ot-page-pad { padding-top: 0; }
+.ot-crumb { padding-top: 36px; margin: 0 0 20px; }
+
+/* ==========================================================================
+   4) Sayfa sonundaki butonun okunur olmasi
+   (.ot-cat-links a kurali butonun beyaz yazisini eziyordu)
+   ========================================================================== */
+.ot-cat-links a.ot-slider-btn,
+.ot-slider-all a.ot-slider-btn,
+.ot-cat-back a.ot-slider-btn {
+    color: #ffffff;
+    background: #8B393A;
+    border: 1px solid #8B393A;
+}
+.ot-cat-links a.ot-slider-btn:hover,
+.ot-slider-all a.ot-slider-btn:hover,
+.ot-cat-back a.ot-slider-btn:hover {
+    color: #ffffff;
+    background: #5A1F20;
+    border-color: #5A1F20;
+}
+.ot-cat-back { margin: 20px 0 0; }
+
+@media (max-width: 767px) {
+    .ot-slide img { height: clamp(340px, 60vh, 520px); }
+    .ot-slide-cap { padding: 54px 16px 18px; }
+    .ot-slide-cap h3 { font-size: 26px; }
+    .ot-crumb { padding-top: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ot-hrf { opacity: 1; transform: none; filter: none; animation: none; }
+}
