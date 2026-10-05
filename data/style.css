@@ -1430,8 +1430,8 @@ body { padding-top: 116px; }
 
 /* --- 2) Web görünümünde: metinler sola yaslı, okla çakışmasın --- */
 @media (min-width: 768px) {
-    .ot-slide img { height: 680px; }
-    .ot-slide-cap { padding-left: 120px; padding-bottom: 200px; }
+    .ot-slide img { height: 500px; }
+    .ot-slide-cap { padding-left: 120px; padding-bottom: 200px; padding-top: clamp(20px, 3vw, 40px); }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
 
@@ -1506,7 +1506,7 @@ body { padding-top: 116px; }
 
 /* --- 8) Mobil: ok yok, açıklama görünür, kartlara yandan boşluk --- */
 @media (max-width: 767px) {
-    .ot-slide img { height: 440px; }
+    .ot-slide img { height: 430px; }
     .ot-slider-nav { display: none; }
     .ot-slide-cap { padding: 84px 16px 36px; }
     .ot-slide-cap p { display: block; font-size: 13px; line-height: 1.55; margin: 0 0 12px; }
@@ -1520,3 +1520,6 @@ body { padding-top: 116px; }
 @media (max-width: 480px) {
     .ot-cards { padding: 0 4px; gap: 20px; }
 }
+
+/* --- Başlıkların altındaki çizgi (gradyan) iptal --- */
+.section-title h2::after { display: none; background-image: none; content: none; }
