@@ -1178,7 +1178,7 @@ body { padding-top: 116px; }
 .ot-slider-track{position:relative}
 .ot-slide{position:relative;display:none}
 .ot-slide.is-active{display:block}
-.ot-slide img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.ot-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center;background-repeat:no-repeat;}
 .ot-slide-cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 22px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 60%,rgba(0,0,0,.95) 100%);color:#ffffff}
 .ot-slide-cap h3{color:#ffffff;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.3}
 .ot-slide-cap p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.6;margin:0 0 14px;max-width:660px}
@@ -1418,7 +1418,7 @@ body { padding-top: 116px; }
    ========================================================================== */
 
 /* --- 1) Slayt gecisi ve tum slaytin tiklanabilir olmasi --- */
-.ot-slide-in { position: relative; display: block; animation: otInR 1s cubic-bezier(.4,0,.2,1) both; }
+.ot-slide-in { position: relative; display: block; width: 100%; height: 100%; animation: otInR 1s cubic-bezier(.4,0,.2,1) both; }
 .ot-slider[data-yon="geri"] .ot-slide-in { animation-name: otInL; }
 @keyframes otInR { from { opacity: 0; transform: translate3d(9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 @keyframes otInL { from { opacity: 0; transform: translate3d(-9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
@@ -1439,7 +1439,7 @@ body { padding-top: 116px; }
         top: 52%;
         bottom: auto;
         transform: translateY(-50%);
-        background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,.55) 70%, rgba(0,0,0,.95) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.40) 50%, rgba(0,0,0,.85) 100%);
     }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
