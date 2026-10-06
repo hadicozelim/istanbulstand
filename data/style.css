@@ -1436,10 +1436,10 @@ body { padding-top: 116px; }
         padding-left: 120px;
         padding-bottom: 0;
         padding-top: 0;
-        top: 52%;
+        top: 54%;
         bottom: auto;
         transform: translateY(-50%);
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.40) 55%, rgba(0,0,0,.88) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.32) 50%, rgba(0,0,0,.86) 100%);
     }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
