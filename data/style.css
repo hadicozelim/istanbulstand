@@ -1179,7 +1179,7 @@ body { padding-top: 116px; }
 .ot-slide{position:relative;display:none}
 .ot-slide.is-active{display:block}
 .ot-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center;background-repeat:no-repeat;}
-.ot-slide-cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 22px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 60%,rgba(0,0,0,.95) 100%);color:#ffffff}
+.ot-slide-cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 22px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.9) 100%);color:#ffffff}
 .ot-slide-cap h3{color:#ffffff;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.3}
 .ot-slide-cap p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.6;margin:0 0 14px;max-width:660px}
 .ot-slider-btn{display:inline-block;background:#8B393A;color:#ffffff;text-decoration:none;padding:9px 20px;border-radius:4px;font-size:13px;font-weight:600;border:0;cursor:pointer;transition:background .2s ease}
@@ -1233,7 +1233,7 @@ body { padding-top: 116px; }
 #portfolio .section-title{padding-top:58px}
 .ot-slider{width:100%;margin:0;border-radius:0;box-shadow:none}
 .ot-slide img{width:100%;height:clamp(340px,62vh,700px);aspect-ratio:auto;object-fit:cover}
-.ot-slide-cap{padding:clamp(70px,10vw,130px) clamp(18px,4vw,56px) clamp(26px,3.2vw,46px);background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.62) 65%,rgba(0,0,0,.96) 100%)}
+.ot-slide-cap{padding:clamp(70px,10vw,130px) clamp(18px,4vw,56px) clamp(26px,3.2vw,46px);background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.38) 60%,rgba(0,0,0,.92) 100%)}
 .ot-slide-cap-in{max-width:1180px;margin:0 auto}
 .ot-slide-cap h3{font-size:clamp(25px,3.5vw,48px);font-weight:800;line-height:1.14;letter-spacing:-.5px;margin:0 0 14px}
 .ot-slide-cap p{font-size:clamp(15px,1.15vw,19px);line-height:1.65;max-width:840px;margin:0 0 22px}
@@ -1418,7 +1418,7 @@ body { padding-top: 116px; }
    ========================================================================== */
 
 /* --- 1) Slayt gecisi ve tum slaytin tiklanabilir olmasi --- */
-.ot-slide-in { position: relative; display: block; width: 100%; height: 100%; animation: otInR 1s cubic-bezier(.4,0,.2,1) both; }
+.ot-slide-in{position:relative;display:block;width:100%;height:500px;animation:otInR 1s cubic-bezier(.4,0,.2,1) both;}
 .ot-slider[data-yon="geri"] .ot-slide-in { animation-name: otInL; }
 @keyframes otInR { from { opacity: 0; transform: translate3d(9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 @keyframes otInL { from { opacity: 0; transform: translate3d(-9%,0,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
@@ -1439,7 +1439,7 @@ body { padding-top: 116px; }
         top: 52%;
         bottom: auto;
         transform: translateY(-50%);
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.40) 50%, rgba(0,0,0,.85) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.40) 55%, rgba(0,0,0,.88) 100%);
     }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
@@ -1516,6 +1516,7 @@ body { padding-top: 116px; }
 /* --- 8) Mobil: ok yok, açıklama görünür, kartlara yandan boşluk --- */
 @media (max-width: 767px) {
     .ot-slide img { height: 430px; }
+    .ot-slide-in { height: 430px; }
     .ot-slider-nav { display: none; }
     .ot-slide-cap { padding: 84px 16px 36px; }
     .ot-slide-cap p { display: block; font-size: 13px; line-height: 1.55; margin: 0 0 12px; }
