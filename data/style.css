@@ -1431,7 +1431,15 @@ body { padding-top: 116px; }
 /* --- 2) Web görünümünde: metinler sola yaslı, okla çakışmasın --- */
 @media (min-width: 768px) {
     .ot-slide img { height: 500px; }
-    .ot-slide-cap { padding-left: 120px; padding-bottom: 200px; padding-top: clamp(20px, 3vw, 40px); }
+    .ot-slide { position: relative; }
+    .ot-slide-cap {
+        padding-left: 120px;
+        padding-bottom: 0;
+        padding-top: 0;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
     .ot-slide-cap-in { width: 50%; max-width: none; margin: 0; }
 }
 
