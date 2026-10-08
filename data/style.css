@@ -1807,22 +1807,33 @@ footer a:hover, footer a:focus, footer a:active { text-decoration: none; }
 /* --- Ekibimiz: hizmetler ile ayni slider gradyani --- */
 .team-section { background: linear-gradient(180deg, #ffffff 0%, #fbfafa 55%, #f4f1f1 100%); }
 
-/* --- Hizmetler: ust kenera kalem (pencil) cizgisi ayraci --- */
-#about.services-section { position: relative; }
-#about.services-section::before {
+/* --- Hizmetler & Ekibimiz: ust kenarda 3D kalem (pencil) ayraci: gocuk profili, iki koseden golge, ustte ince isik --- */
+#about.services-section, #team.team-section { position: relative; }
+#about.services-section::before, #team.team-section::before {
     content: "";
     position: absolute;
-    top: 22px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: min(1170px, calc(100% - 40px));
-    height: 1px;
-    background: rgba(10, 10, 10, .16);
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, .42) 10%, rgba(10, 10, 10, .42) 90%, rgba(10, 10, 10, 0) 100%);
+    box-shadow:
+        -18px 9px 14px -6px rgba(10, 10, 10, .30),
+        18px 9px 14px -6px rgba(10, 10, 10, .30),
+        0 1px 0 rgba(255, 255, 255, .8);
 }
+/* konum: asagi ok ile baslik satiri arasinda dikey tam orta (ok alti 24/20, h2 ustu 96/74 | 90/55) */
+#about.services-section::before { top: 36px; }      /* (96 - 24) / 2 */
+#team.team-section::before { top: 33px; }           /* (90 - 24) / 2 */
 @media (max-width: 767px) {
-    #about.services-section::before { top: 14px; }
+    #about.services-section::before { top: 27px; }  /* (74 - 20) / 2 */
+    #team.team-section::before { top: 17.5px; }     /* (55 - 20) / 2 */
 }
+
+/* --- Referanslar: asagi ok (Ekibimiz'e) konumlanma temeli --- */
+#references { position: relative; }
 
 /* ==========================================================================
    Duzeltme 11: ok ve noktalar slaytla kaymasin, sabit kalsin
@@ -1838,4 +1849,59 @@ footer a:hover, footer a:focus, footer a:active { text-decoration: none; }
 @keyframes otKutuFixR { from { transform: translate3d(100vw, 0, 0); } to { transform: none; } }
 @media (prefers-reduced-motion: reduce) {
     .ot-slide.is-active .ot-slider-kutu { animation: none; }
+}
+
+/* ==========================================================================
+   Duzeltme 12: mobil TR/EN butonu (toggle ikonu altinda), diger duzeltmeler
+   ========================================================================== */
+
+/* --- Masaustu: dil butonu menu icinde (mevcut hali); mobil yeni buton gizli --- */
+.lang-switch-mob { display: none; }
+
+@media (max-width: 767px) {
+    /* --- Menu (tam ekran acilis) icindeki dil baglantisini kaldir --- */
+    #mainNavCollapse .navbar-nav > li.lang-switch { display: none; }
+
+    /* --- Toggle ikonun hemen altinda, sag kenara hizali TR EN butonu --- */
+    .navbar-header .lang-switch-mob {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: calc(50% + 20px);
+        min-width: 46px;
+        padding: 4px 7px;
+        border: 1px solid #5B5E66;
+        border-radius: 4px;
+        background: transparent;
+        color: #5B5E66;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        line-height: 1;
+        text-transform: uppercase;
+        text-decoration: none;
+        z-index: 1060;
+    }
+    .navbar-header .lang-switch-mob:hover,
+    .navbar-header .lang-switch-mob:focus,
+    .navbar-header .lang-switch-mob:active {
+        color: #812021;
+        border-color: #812021;
+        text-decoration: none;
+    }
+}
+
+
+/* ==========================================================================
+   Duzeltme 13: mobil slayt metin kutusu sabit yukseklik
+   (tum slaytlar ayni yukseklikta, gecisde ziplama olmasin)
+   olcum: 360-767 max aktif cap = 251px; 320-359 (EN 3 satir baslik) = 280px
+   ========================================================================== */
+@media (max-width: 767px) {
+    .ot-slide-cap { height: 251px; }
+}
+@media (max-width: 359px) {
+    .ot-slide-cap { height: 280px; }
 }
