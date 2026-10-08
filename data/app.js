@@ -205,12 +205,38 @@
         btnDots.push(b);
       }
     }
-    function git(n) {
-      i = (n + items.length) % items.length;
-      for (var k = 0; k < items.length; k++) {
-        items[k].classList.toggle("is-active", k === i);
-        if (btnDots[k]) btnDots[k].classList.toggle("is-active", k === i);
+    /* --- Kontroller aktif slaytin metin kutusuna tasinir --- */
+    var kontrolKutu = null;
+    function kontrolYerlestir() {
+      var kap = items[i].querySelector(".ot-slide-cap-in");
+      if (!kap) return;
+      if (!kontrolKutu) {
+        kontrolKutu = document.createElement("div");
+        kontrolKutu.className = "ot-slider-kutu";
+        if (prev) kontrolKutu.appendChild(prev);
+        if (dots) kontrolKutu.appendChild(dots);
+        if (next) kontrolKutu.appendChild(next);
       }
+      if (kontrolKutu.parentNode !== kap) kap.appendChild(kontrolKutu);
+    }
+
+    function git(n) {
+      var y = (n + items.length) % items.length;
+      if (y !== i) {
+        var eski = items[i];
+        i = y;
+        eski.classList.add("is-cikis");
+        (function (c) {
+          setTimeout(function () { c.classList.remove("is-cikis"); }, 640);
+        })(eski);
+      }
+      for (var k = 0; k < items.length; k++) {
+        var aktif = (k === i);
+        items[k].classList.toggle("is-active", aktif);
+        if (aktif) items[k].classList.remove("is-cikis");
+        if (btnDots[k]) btnDots[k].classList.toggle("is-active", aktif);
+      }
+      kontrolYerlestir();
     }
     function yon(y) { sl.setAttribute("data-yon", y); }
     function durdur() { if (timer) { clearInterval(timer); timer = null; } }
@@ -245,13 +271,59 @@
       }
       baslat();
     }, { passive: true });
-    /* kaydirma sonrasi tiklama sayfaya gitmesin */
+    /* --- Kaydirma sonrasi tiklama sayfaya gitmesin --- */
     sl.addEventListener("click", function (e) {
-      if (engelle) { e.preventDefault(); e.stopPropagation(); engelle = false; }
+      if (engelle || fengelle) { e.preventDefault(); e.stopPropagation(); engelle = false; fengelle = false; }
     }, true);
+
+    /* --- Masaustunda fare ile surukleyerek gecis (swipe) --- */
+    var fx = 0, fy = 0, fsuruk = false, fduruyor = false, fengelle = false;
+    sl.addEventListener("dragstart", function (e) { e.preventDefault(); });
+    sl.addEventListener("mousedown", function (e) {
+      if (e.button !== 0 || e.detail === 0) return;
+      e.preventDefault();
+      fduruyor = true; fsuruk = false; fengelle = false;
+      fx = e.clientX; fy = e.clientY;
+      durdur();
+    });
+    document.addEventListener("mousemove", function (e) {
+      if (!fduruyor) return;
+      if (Math.abs(e.clientX - fx) > 14 && Math.abs(e.clientX - fx) > Math.abs(e.clientY - fy)) fsuruk = true;
+    });
+    document.addEventListener("mouseup", function (e) {
+      if (!fduruyor) return;
+      fduruyor = false;
+      if (fsuruk) {
+        var dx = e.clientX - fx;
+        if (Math.abs(dx) > 60) { yon(dx < 0 ? "ileri" : "geri"); git(dx < 0 ? i + 1 : i - 1); }
+        fengelle = true; fsuruk = false;
+      }
+      baslat();
+    });
 
     yon("ileri");
     git(0);
     baslat();
+  });
+})();
+
+/* --- Hizmet bloklarinin basliklarina harf harf giris efekti --- */
+(function () {
+  var basliklar = document.querySelectorAll(".service-grid .mz-module-about h3");
+  [].forEach.call(basliklar, function (h) {
+    if (h.querySelector(".ot-hrf")) return;
+    var metin = h.textContent.replace(/\s+/g, " ").trim();
+    h.textContent = "";
+    Array.from(metin).forEach(function (c, i) {
+      if (c === " ") {
+        h.appendChild(document.createTextNode("\u00A0"));
+      } else {
+        var s = document.createElement("span");
+        s.className = "ot-hrf";
+        s.style.setProperty("--i", i);
+        s.textContent = c;
+        h.appendChild(s);
+      }
+    });
   });
 })();

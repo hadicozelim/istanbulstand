@@ -1533,3 +1533,309 @@ body { padding-top: 116px; }
 
 /* --- Başlıkların altındaki çizgi (gradyan) iptal --- */
 .section-title h2::after { display: none; background-image: none; content: none; }
+
+/* ==========================================================================
+   Duzeltme 8: Slider yeniden duzenleme
+   - Tekrar (repeat) ozellikleri ve kaplayan koyu gradyan kaldirildi, metinler siyah
+   - Masaustu: metin solda / gorsel sagda   Mobil: gorsel ustte / metin altta
+   - Gorsel: bordersiz, abstrakt sekil + katmanli golge (3D his), object-fit: cover
+   - Icerik header/logo ile ayni sabit genislikte, zoom'da yeri degismez
+   ========================================================================== */
+
+.ot-slider {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfafa 55%, #f4f1f1 100%);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .07);
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ot-slide-in {
+    --ot-sekil: 54% 46% 52% 48% / 48% 54% 46% 52%;
+    height: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 18px 15px 30px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.ot-slide { background: linear-gradient(180deg, #ffffff 0%, #fbfafa 55%, #f4f1f1 100%); }
+.ot-slide.is-active { position: relative; z-index: 2; }
+.ot-slide.is-cikis { display: block; position: absolute; top: 0; left: 0; width: 100%; z-index: 1; pointer-events: none; }
+
+.ot-slide img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 17 / 12;
+    object-fit: cover;
+    object-position: center;
+    background: none;
+    border: 0;
+    border-radius: var(--ot-sekil);
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, .10),
+        0 20px 38px -16px rgba(0, 0, 0, .30),
+        0 46px 68px -34px rgba(0, 0, 0, .42);
+    transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.ot-slide-cap {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: start;
+    z-index: 2;
+    padding: 0;
+    background: none;
+    color: #0a0a0a;
+    pointer-events: auto;
+}
+.ot-slide-cap-in { width: 100%; max-width: 100%; margin: 0; }
+.ot-slide-cap h3 { color: #0a0a0a; font-size: 20px; line-height: 1.2; letter-spacing: -.2px; }
+.ot-slide-cap p { display: block; color: #4a4a4a; font-size: 13.5px; line-height: 1.6; }
+
+.ot-slide-hit {
+    position: relative;
+    inset: auto;
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: stretch;
+    z-index: 3;
+    border-radius: var(--ot-sekil);
+}
+.ot-slide-hit:focus-visible { outline: 3px solid #812021; outline-offset: -8px; }
+
+.ot-slide-cap .ot-incele {
+    background: #8B393A;
+    color: #ffffff;
+    border: 1px solid #8B393A;
+    padding: 11px 26px;
+}
+.ot-slide-cap .ot-incele:hover,
+.ot-slide-cap .ot-incele:focus { background: #5A1F20; border-color: #5A1F20; color: #ffffff; }
+
+.ot-slider-nav {
+    background: #ffffff;
+    color: #0a0a0a;
+    border: 1px solid rgba(0, 0, 0, .10);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .16);
+}
+.ot-slider-nav:hover { background: #8B393A; color: #ffffff; border-color: #8B393A; }
+.ot-slider-dots button { background: rgba(10, 10, 10, .20); }
+.ot-slider-dots button.is-active { background: #0a0a0a; }
+
+/* --- Kontroller aktif slayt metninin altinda akis icinde --- */
+.ot-slider-kutu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 26px;
+}
+.ot-slide .ot-slider-nav {
+    position: static;
+    top: auto; left: auto; right: auto; bottom: auto;
+    transform: none;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+}
+.ot-slide .ot-slider-dots {
+    position: static;
+    top: auto; left: auto; right: auto; bottom: auto;
+    gap: 9px;
+}
+.ot-slide .ot-slider-dots button { width: 9px; height: 9px; }
+.ot-slide .ot-slider-dots button.is-active { width: 26px; }
+
+@media (min-width: 768px) {
+    .ot-slide-in {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+        gap: 40px;
+        max-width: 750px;
+        padding: 26px 15px 48px;
+    }
+    .ot-slide img,
+    .ot-slide-hit { grid-area: 1 / 2 / 2 / 3; }
+    .ot-slide img { transform: perspective(1500px) rotateY(6deg) rotateX(1.5deg); }
+    .ot-slide-hit { transform: perspective(1500px) rotateY(6deg) rotateX(1.5deg); }
+    .ot-slide-cap { grid-area: 1 / 1 / 2 / 2; }
+    .ot-slide-cap h3 { font-size: 30px; }
+    .ot-slide-cap p { font-size: 15px; }
+}
+
+@media (min-width: 992px) {
+    .ot-slide-in { max-width: 970px; }
+    .ot-slide-cap h3 { font-size: 36px; }
+}
+
+@media (min-width: 1200px) {
+    .ot-slide-in { max-width: 1170px; gap: 56px; padding-top: 32px; }
+    .ot-slide-cap h3 { font-size: 40px; }
+    .ot-slide-cap p { font-size: 16.5px; }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+    .ot-slide-in:has(.ot-slide-hit:hover) img,
+    .ot-slide-in:has(.ot-slide-hit:hover) .ot-slide-hit {
+        transform: perspective(1500px) rotateY(0deg) rotateX(0deg) translateY(-8px);
+    }
+    .ot-slide-in:has(.ot-slide-hit:hover) img {
+        box-shadow:
+            0 6px 14px rgba(0, 0, 0, .12),
+            0 30px 52px -18px rgba(0, 0, 0, .34),
+            0 60px 86px -40px rgba(0, 0, 0, .46);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ot-slide img { transition: none; transform: none; }
+    .ot-slide-hit { transform: none; }
+    .ot-slide-in:has(.ot-slide-hit:hover) img,
+    .ot-slide-in:has(.ot-slide-hit:hover) .ot-slide-hit { transform: none; }
+}
+/* ==========================================================================
+   Duzeltme 9: kullanici geri bildirimleri
+   - Slayt gecisi: gercek sola kayma (giren sagdan, cikan sola, opak)
+   - Mobil: gorsel ortada + biraz kucuk, metinlere padding + buyuk yazi
+   - Masaustu: slider metin blogu asagiya kayar
+   - Header: acilista golgesiz, scrollda golgeli
+   - Hizmetler: mobilde ust bosluk artar, desktopta azalir; baslik paragrafa yakin
+   - Hizmet bloklari: gradyanin acik varyantlari + siyah uppercase basliklar
+   - Ekibimiz/footer linklerinde hover alti cizgi yok
+   - Portfolyo detay: hero gorseli slider sekli, ortali, makul boyut
+   ========================================================================== */
+
+/* --- 1) Slayt gecisi: sola kayma --- */
+.ot-slide.is-active .ot-slide-in,
+.ot-slide.is-cikis .ot-slide-in { animation: none; }
+.ot-slide.is-active { animation: otInR .64s cubic-bezier(.4, 0, .2, 1) both; }
+.ot-slider[data-yon="geri"] .ot-slide.is-active { animation-name: otInL; }
+.ot-slide.is-cikis { animation: otOutL .64s cubic-bezier(.4, 0, .2, 1) both; }
+.ot-slider[data-yon="geri"] .ot-slide.is-cikis { animation-name: otOutR; }
+@keyframes otInR { from { transform: translate3d(100%,0,0); } to { transform: none; } }
+@keyframes otInL { from { transform: translate3d(-100%,0,0); } to { transform: none; } }
+@keyframes otOutL { from { transform: none; } to { transform: translate3d(-100%,0,0); } }
+@keyframes otOutR { from { transform: none; } to { transform: translate3d(100%,0,0); } }
+
+/* --- 2) Mobil: gorsel ortada + biraz kucuk, metin padding + daha buyuk --- */
+@media (max-width: 767px) {
+    .ot-slide img,
+    .ot-slide .ot-slide-hit { width: calc(100% - 48px); justify-self: center; }
+    .ot-slide-cap { padding: 6px 10px 10px; }
+    .ot-slide-cap h3 { font-size: 24px; }
+    .ot-slide-cap p { font-size: 15px; line-height: 1.62; }
+}
+
+/* --- 3) Masaustu: slider metin blogu asagiya iner --- */
+@media (min-width: 768px) {
+    .ot-slide-cap { padding-top: 44px; }
+}
+
+/* --- 4) Header: acilista golgesiz, scrollda golgeli --- */
+.navbar-default { box-shadow: none; }
+
+/* --- 5) Hizmetler bolumu bosluklari --- */
+#about.services-section { padding-top: 56px; }
+.services-section .section-title { padding-bottom: 18px; }
+@media (max-width: 767px) {
+    #about.services-section { padding-top: 34px; }
+}
+
+/* --- 6) Hizmetler: section slider gradyani; kartlar siyah kaliyor --- */
+.services-section {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfafa 55%, #f4f1f1 100%);
+}
+.service-grid .mz-module-about h3 { color: #ffffff; }
+.service-grid > div:hover .mz-module-about h3 { color: #ffffff; }
+.service-grid > div.reveal.revealed .mz-module-about h3 .ot-hrf {
+    animation: otHrf .62s cubic-bezier(.22, .85, .3, 1) both;
+    animation-delay: calc(160ms + var(--i) * 34ms);
+}
+@media (prefers-reduced-motion: reduce) {
+    .service-grid .mz-module-about h3 .ot-hrf { opacity: 1; transform: none; filter: none; animation: none; }
+}
+
+/* --- 7) Ekibimiz + footer linklerinde hover alti cizgi yok --- */
+#team a:hover, #team a:focus, #team a:active,
+footer a:hover, footer a:focus, footer a:active { text-decoration: none; }
+
+/* --- 8) Portfolyo detay: hero gorseli slider sekli, ortali, makul boyut --- */
+.ot-cat-hero {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    overflow: visible;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+}
+.ot-cat-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 17 / 12;
+    object-fit: cover;
+    border-radius: 54% 46% 52% 48% / 48% 54% 46% 52%;
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, .10),
+        0 20px 38px -16px rgba(0, 0, 0, .30),
+        0 46px 68px -34px rgba(0, 0, 0, .42);
+}
+.ot-cat-head { text-align: center; max-width: 720px; margin: 0 auto; }
+@media (max-width: 767px) {
+    .ot-cat-hero { width: calc(100% - 40px); }
+}
+
+/* ==========================================================================
+   Duzeltme 10: illetisim beyaz zemin, ekibimiz gradyan, hizmetler ust ayrac
+   ========================================================================== */
+
+/* --- Iletisim: beyaz zemin --- */
+#contact.contact-section { background: #ffffff; }
+
+/* --- Ekibimiz: hizmetler ile ayni slider gradyani --- */
+.team-section { background: linear-gradient(180deg, #ffffff 0%, #fbfafa 55%, #f4f1f1 100%); }
+
+/* --- Hizmetler: ust kenera kalem (pencil) cizgisi ayraci --- */
+#about.services-section { position: relative; }
+#about.services-section::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: min(1170px, calc(100% - 40px));
+    height: 1px;
+    background: rgba(10, 10, 10, .16);
+}
+@media (max-width: 767px) {
+    #about.services-section::before { top: 14px; }
+}
+
+/* ==========================================================================
+   Duzeltme 11: ok ve noktalar slaytla kaymasin, sabit kalsin
+   (giren slayt ile ayni surede ters yone hareket ederek yerinde durur)
+   ========================================================================== */
+.ot-slide.is-active .ot-slider-kutu {
+    animation: otKutuFix .64s cubic-bezier(.4, 0, .2, 1) both;
+}
+.ot-slider[data-yon="geri"] .ot-slide.is-active .ot-slider-kutu {
+    animation-name: otKutuFixR;
+}
+@keyframes otKutuFix { from { transform: translate3d(-100vw, 0, 0); } to { transform: none; } }
+@keyframes otKutuFixR { from { transform: translate3d(100vw, 0, 0); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+    .ot-slide.is-active .ot-slider-kutu { animation: none; }
+}
