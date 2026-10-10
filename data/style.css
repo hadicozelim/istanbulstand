@@ -1249,7 +1249,7 @@ body { padding-top: 116px; }
 /* ==========================================================================
    Portfolyo sayfasi: elegans hover kartlari
    ========================================================================== */
-.ot-page-pad{padding:46px 0 62px}
+.ot-page-pad{padding:36px 0 62px}
 .ot-page-h1{font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.1;letter-spacing:-1.2px;color:#0a0a0a;margin:0 0 16px}
 .ot-page-intro{font-size:clamp(16px,1.25vw,19px);color:#4a4a4a;line-height:1.7;max-width:780px;margin:0 auto 54px}
 .ot-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:34px}
@@ -1376,7 +1376,7 @@ body { padding-top: 116px; }
 /* ==========================================================================
    3) Alt sayfalarda breadcrumb ustundeki bosluk
    ========================================================================== */
-#kategori { padding: 0; }
+#kategori { padding: 0 20px; }
 #kategori .ot-page-pad { padding-top: 0; }
 .ot-crumb { padding-top: 36px; margin: 0 0 20px; }
 
@@ -1405,6 +1405,7 @@ body { padding-top: 116px; }
     .ot-slide-cap { padding: 54px 16px 18px; }
     .ot-slide-cap h3 { font-size: 26px; }
     .ot-crumb { padding-top: 26px; }
+    .ot-page-pad { padding-top: 26px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1528,7 +1529,7 @@ body { padding-top: 116px; }
     .ot-cards { padding: 0 8px; gap: 22px; }
 }
 @media (max-width: 480px) {
-    .ot-cards { padding: 0 4px; gap: 20px; }
+    .ot-cards { padding: 0 20px; gap: 20px; }
 }
 
 /* --- Başlıkların altındaki çizgi (gradyan) iptal --- */
